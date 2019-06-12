@@ -1,0 +1,2781 @@
+{
+	"filename":"tagManager",
+	"skip":true,
+	"停用":[
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：组合标签1-1)(组合无法打标签)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"","combination_tag_id":"21018","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"35755"]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：组合标签1-2)(组合无法打标签)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"","combination_tag_id":"21019","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,6,"35755"]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：组合标签2-1)(组合无法打标签)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"","combination_tag_id":"21020","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"35755"]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：组合标签2-2)(组合无法打标签)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"","combination_tag_id":"77129","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"2111"]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签2-1、组合标签2-2)(组合无法打标签)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"76791","combination_tag_id":"77129","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"2111"]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签1-1、sku277283301)(有问题)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"255201","index_condition_id":"","ad_tag_id":"76781","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,1,80937]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签1-1)(有问题)(产品分析需要重构)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76781","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,11]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签1-1)(有问题)(产品分析需要重构)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76781","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,1]
+      	},
+
+
+
+		{
+		"id":0,
+		"Document":"1119账号：投放标签-年货节(1单元)",
+		"note":[
+			"投放标签-年货节",
+			"双11预售_店铺_老客_cpc",
+			"(双11预售_店铺_老客_cpc)(DMP_365天购买2次180天未购买)"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":5,"tag_id":76836,"action":"insert","object_id":"2825946_83484"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"]
+      	},
+		{
+		"id":0,
+		"Document":"1119账号：投放标签-超级品牌日(1单元)",
+		"note":[
+			"投放标签-超级品牌日",
+			"双11预售_店铺_老客_cpc",
+			"(双11预售_店铺_老客_cpc)(达摩盘_超级用户)"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":5,"tag_id":76837,"action":"insert","object_id":"2825946_87993"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"]
+      	}
+
+
+	],
+	"RECORDS": [
+		{
+		"id":0,
+		"Document":"投放标签-查询数据（条件：计划名IOS【CA _MPA】KZ 指定SKU）",
+		"Request_Method":"GET",
+		"Request_URL":"/dmp/label/target",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":2815255},
+		"Request_Data":"",
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"投放标签-打标签1-1(1计划+1单元)",
+		"note":[
+			"投放标签1-1",
+			"IOS 【FR_PL】KZ 指定SKU",
+			"(IOS PL KZ 自动选品)(0919-1，pl，us，15-45，M，m，fb，null，ios，Men)",
+
+			"IOS-CA-mpa KZ 自动选品",
+			"(IOS【CA _MPA】KZ 指定SKU)([API-17]-20180919,MPA,CA,15-45,M,m,fb,274841003/277283302/278876001/280270404/274840503/276702424,ios,null)"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":5,"tag_id":76781,"action":"insert","object_id":"2816416,2814283_47607,2815819,2815255_47628"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"投放标签-打标签1-2(1计划+2单元)",
+		"note":[
+			"投放标签1-2",
+			"IOS-CA-PL KZ 自动选品",
+			"(IOS 【US_PL】KZ 指定SKU)(1015-27，pl，us，15-45，M，m，fb，null，ios，null;  1015-30，pl，us，15-45，F，m，fb，null，ios，null)",
+
+			"IOS-US-mpa KZ 自动选品",
+			"(IOS 【US_MPA】KZ 指定SKU)(1012-14，mpa，us，15-45，F，m，fb，null，ios，Jackets & Coats;  1015-19，mpa，us，15-45，M，m，fb，null，ios，null)"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":5,"tag_id":76784,"action":"insert","object_id":"2816375,2816414_58824,2816414_58827,2814282,2814220_58631,2814220_58789"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"投放标签-打标签2-1(1个计划)",
+		"note":[
+			"投放标签2-1",
+			"IOS 【CA_PL】KZ 指定SKU",
+
+			"IOS-UK-mpa KZ 自动选品"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":5,"tag_id":76789,"action":"insert","object_id":"2816413,2815817"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+
+		{
+		"id":0,
+		"Document":"投放标签-打标签2-2(1个单元)",
+		"note":[
+			"投放标签2-2",
+			"(IOS-UK-PL KZ 自动选品)(1015-10，pl，gb，15-45，M，m，fb，null，ios，Bottoms)",
+
+			"(IOS-FR-mpa KZ 自动选品)(0912-3，mpa，fr，15-45，M，m，fb，null，ios，Men)"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":5,"tag_id":76791,"action":"insert","object_id":"2816376_58779,2815818_46876"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+
+		{
+		"id":0,
+		"Document":"投放标签-打标签1-1-1(两个计划)",
+		"note":[
+			"投放标签1-1-1(两个计划)",
+			"IOS-UK-PL KZ 自动选品",
+			"IOS PL KZ 自动选品",
+
+			"IOS 【FR_MPA】KZ 指定SKU",
+			"IOS【UK _MPA】KZ 指定SKU"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":5,"tag_id":77127,"action":"insert","object_id":"2816376,2814283,2815256,2816381"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+
+
+
+		{
+		"id":0,
+		"Document":"组合标签-打标签1-1(2个创意同一单元)",
+		"note":[
+			"组合标签1-1",
+			"banner_7694158_588_1389969,1623252,1623253,1623254,1587042,1367463,1643528,1645157,0,0,0(1012_34_1012-2)",
+			"banner_7686672_588_1389969,1646413,1567892,1367463,0,0,0,0,0,0,0(1012_2_1012-2)",
+			"(IOS-UK-PL KZ 自动选品)(1012-2，pl，gb，15-45，F，m，fb，null，ios，Sweaters)",
+
+			"",
+			""
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":3,"tag_id":21018,"action":"insert","object_id":"1016618,1016548"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"组合标签-打标签1-2(3个创意x2个单元)",
+		"note":[
+			"组合标签1-2",
+			"banner_7694239_588_1635864,1489006,1635866,1635867,1635868,0,0,0,0,0,0(1015_2_1015-33)",
+			"banner_7694239_588_1635864,1501319,1635866,1635867,1635868,0,0,0,0,0,0(1015_4_1015-33)",
+			"banner_7689829_588_1600362,1489006,1564530,1600365,1600366,1600367,0,0,0,0,0(1015_7_1015-33)",
+			"(IOS 【FR_PL】KZ 指定SKU)(1015-33，pl，fr，15-45，F，m，fb，null，ios，null)",
+			"banner_7686672_588_1389969,1646413,1567892,1554737,0,0,0,0,0,0,0(1015_2_1015-34)",
+			"banner_7686672_588_1389969,1646413,1567892,1631283,0,0,0,0,0,0,0(1015_3_1015-34)",
+			"banner_7686672_588_1389969,1646413,1567892,1609769,0,0,0,0,0,0,0(1015_1_1015-34)",
+			"(IOS 【FR_PL】KZ 指定SKU)(1015-34，pl，fr，15-45，M，m，fb，null，ios，null)",
+
+
+
+
+			"",
+			""
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":3,"tag_id":21019,"action":"insert","object_id":"1018182,1018181,1018167,1018164,1017975,1016636"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"组合标签-打标签2-1(1个创意)",
+		"note":[
+			"组合标签2-1",
+			"banner_7686344_588_1389969,1589981,1563617,1561496,0,0,0,0,0,0,0(1012_22_1012-1)",
+			"(IOS-UK-PL KZ 自动选品)(1012-1，pl，gb，15-45，F，m，fb，null，ios，Sweatshirts)",
+
+			"",
+			"()()"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":3,"tag_id":21020,"action":"insert","object_id":"1016478"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"组合标签-打标签2-2",
+		"note":[
+			"组合标签2-2",
+			"banner_7694238_588_1635860,1581916,1581899,1635863,0,0,0,0,0,0,0(1018_4_1015-10)",
+			"(IOS-UK-PL KZ 自动选品)(1015-10，pl，gb，15-45，M，m，fb，null，ios，Bottoms)",
+
+			"",
+			"()()"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":3,"tag_id":77129,"action":"insert","object_id":"1028616"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+
+
+
+		{
+		"id":0,
+		"Document":"元素标签-打标签-40%off",
+		"note":[
+			"元素标签slogan1-40%off"
+
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":"2","tag_id":"77538","action":"insert","tag_class_id":"4","object_id":"1548482"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"元素标签-打标签-70%off",
+		"note":[
+			"元素标签slogan1-70%off"
+
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":"2","tag_id":"77539","action":"insert","tag_class_id":"4","object_id":"1600353"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"元素标签-打标签-红hotsale",
+		"note":[
+			"元素标签slogan1-红hotsale"
+
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":"2","tag_id":"77540","action":"insert","tag_class_id":"4","object_id":"1548454"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+
+
+
+
+
+		{
+		"id":0,
+		"Document":"产品标签-打标签-商品标签1-1",
+		"note":[
+			"产品sku-272963101"
+
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":"4","tag_id":"20974","action":"insert","object_id":"242460,255201"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"产品标签-打标签-商品标签1-2",
+		"note":[
+			"产品sku-272963101"
+
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":"4","tag_id":"20974","action":"insert","object_id":"242460"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+
+
+
+
+
+
+		{
+		"id":0,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：投放标签1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":76781},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,1,"134302",3.281646],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "134302"]},
+			{"eq": ["data.summary.install_unit_price", 3.281646]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":76784},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,1,"217552",3.031055],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "217552"]},
+			{"eq": ["data.summary.install_unit_price", 3.031055]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76789"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,1,"119023",4.002421],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "119023"]},
+			{"eq": ["data.summary.install_unit_price", 4.002421]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76791"},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：投放标签1-1、投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76781,76784"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,2,"351854",3.093703],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "351854"]},
+			{"eq": ["data.summary.install_unit_price", 3.093703]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：投放标签1-1、投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76781,76789"},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：投放标签1-1、计划IOS 【UK_PL】KZ 指定SKU)(有问题)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"2816415","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":76781},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：投放标签1-1-1、开启状态)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"2","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":77127},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,1,"491296",1.578121],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "491296"]},
+			{"eq": ["data.summary.install_unit_price", 1.578121]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：投放标签1-2、1-1-1、搜索计划IOS-UK-PL KZ 自动选品)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"2816376","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76784,77127"},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+
+
+
+
+		{
+		"id":7,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：投放标签1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76781"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"246931"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "246931"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76784"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"76291"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+			{"eq": ["data.summary.impression_num", "76291"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76789"},
+      	"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76791"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"106517"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "106517"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：投放标签1-1、投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76781,76784"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,3,"323222"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 3]},
+			{"eq": ["data.summary.impression_num", "323222"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：投放标签1-2、投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76784,76791"},
+      	"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：投放标签1-2、开启状态)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":2,"ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76784"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"42801"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "42801"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：投放标签1-2、1-2、计划IOS 【US_PL】KZ 指定SKU)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"58827,58824","kpi_status":"","platform_id":"","campaign_id":"2816414","third_ad_set_state":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76781,76784"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"76291"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+			{"eq": ["data.summary.impression_num", "76291"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：投放标签CA、自动选品、F、JandC)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"77622,77627,77630,77636"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"81250"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+			{"eq": ["data.summary.impression_num", "81250"]}]
+		},
+
+
+
+
+
+
+
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放标签1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76781","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,19,"381233"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 19]},
+			{"eq": ["data.summary.impression_num", "381233"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76784","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,205,"293843"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 205]},
+			{"eq": ["data.summary.impression_num", "293843"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76791","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,14,"106517"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 14]},
+			{"eq": ["data.summary.impression_num", "106517"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76791","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,14,"106517"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 14]},
+			{"eq": ["data.summary.impression_num", "106517"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放标签1-1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"77127","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,290,"949828"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 290]},
+			{"eq": ["data.summary.impression_num", "949828"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放标签1-1、投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76781,76784","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,224,"675076"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 224]},
+			{"eq": ["data.summary.impression_num", "675076"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放标签2-1、投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76789,76791","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,26,"225540"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 26]},
+			{"eq": ["data.summary.impression_num", "225540"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放标签1-1、投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76781,76789","page":1,"page_size":10},
+        "assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：组合标签1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"","combination_tag_id":"21018","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,3,"15322"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 3]},
+			{"eq": ["data.summary.impression_num", "15322"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：组合标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"","combination_tag_id":"21019","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,20,"235096"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 20]},
+			{"eq": ["data.summary.impression_num", "235096"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：组合标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"","combination_tag_id":"21020","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"35755"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "35755"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：组合标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"","combination_tag_id":"77129","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"2111"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "2111"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放标签2-2，计划IOS 【FR_PL】KZ 指定SKU)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"2816416","compare_id":"","ad_set_id":"58831,58830","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"76791","combination_tag_id":"","page":"1","page_size":"20","order_field":"","order_type":""},
+        "assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放标签2-2、组合标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"76791","combination_tag_id":"77129","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"2111"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "2111"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(条件：投放CA、自动选品、F、JandC)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"77622,77627,77630,77636","combination_tag_id":"","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,53,"81250"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 53]},
+			{"eq": ["data.summary.impression_num", "81250"]}]
+      	},
+
+
+
+
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签1-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76781","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,8,"316477"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 8]},
+			{"eq": ["data.rows.0.impression_num", "316477"]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签1-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76784","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,13,"59558"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 13]},
+			{"eq": ["data.rows.0.impression_num", "59558"]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签2-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76789","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,4,"82912"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 4]},
+			{"eq": ["data.rows.0.impression_num", "82912"]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签2-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76791","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,5,"62766"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 5]},
+			{"eq": ["data.rows.0.impression_num", "62766"]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签1-1、投放标签1-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76781,76784","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,14,"376035"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 14]},
+			{"eq": ["data.rows.0.impression_num", "376035"]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签2-1、投放标签2-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76789,76791","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,7,"82912"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 7]},
+			{"eq": ["data.rows.0.impression_num", "82912"]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签1-1、投放标签2-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76789,76781","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：模板标签-中间文四周图)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"","template_tag_id":"70622"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,4,"35332"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 4]},
+			{"eq": ["data.rows.0.impression_num", "35332"]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签2-1、模板标签-中间文四周图)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"76789","template_tag_id":"70622"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,"4464"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+			{"eq": ["data.rows.0.impression_num", "4464"]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签2-1、计划IOS 【FR_PL】KZ 指定SKU)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"58831,58830","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"76789","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签2-1、状态激活)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"1","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"76789","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,2],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 2]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签2-2、计划IOS-UK-PL KZ 自动选品)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2816376","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"58779,58778,58777,58774,58620,58619,58618,58617","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"76791","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,5,"62766"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 5]},
+			{"eq": ["data.rows.0.impression_num", "62766"]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-单图：获取列表数据(条件：投放标签CA、自动选品、F、JandC)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"banner","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"77622,77627,77630,77636","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,11,"27285"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 11]},
+			{"eq": ["data.rows.0.impression_num", "27285"]}]
+      	},
+
+
+
+
+
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76781","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary_total","impression_num"]],
+		"assertExpect":[0,44,"381233"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 44]},
+			{"eq": ["data.summary_total.impression_num", "381233"]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76784","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary_total","impression_num"]],
+		"assertExpect":[0,97,"293843"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 97]},
+			{"eq": ["data.summary_total.impression_num", "293843"]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76789","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary_total","impression_num"]],
+		"assertExpect":[0,20,"119023"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 20]},
+			{"eq": ["data.summary_total.impression_num", "119023"]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76791","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary_total","impression_num"]],
+		"assertExpect":[0,29,"106517"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 29]},
+			{"eq": ["data.summary_total.impression_num", "106517"]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签1-1、投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76781,76784","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary_total","impression_num"]],
+		"assertExpect":[0,110,"675076"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 110]},
+			{"eq": ["data.summary_total.impression_num", "675076"]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签2-1、投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76789,76791","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary_total","impression_num"]],
+		"assertExpect":[0,42,"225540"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 42]},
+			{"eq": ["data.summary_total.impression_num", "225540"]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签1-1、投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76789,76781","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：元素标签-40%off)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"","element_tag_id":"77538","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,1,85247],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.list.0.impression_num", 85247]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签1-1、元素标签-40%off)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76781","element_tag_id":"77538","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,1,1585],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.list.0.impression_num", 1585]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签1-1、计划IOS 【UK_PL】KZ 指定SKU)(有问题)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"2750159","ad_set_id":"58829,58828","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76781","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签1-1、模板8.24-1200-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"7686672","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76781","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,8,80937],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 8]},
+			{"eq": ["data.list.0.impression_num", 80937]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-单图：获取列表数据(条件：投放标签CA、自动选品、F、JandC)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"77622,77627,77630,77636","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"2","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,42,1986],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 42]},
+			{"eq": ["data.list.0.impression_num", 1986]}]
+      	},
+
+
+
+
+
+
+
+
+
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签1-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76784","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,64,43909],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 64]},
+			{"eq": ["data.rows.0.impression_num", 43909]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签2-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76789","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,11,65388],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 11]},
+			{"eq": ["data.rows.0.impression_num", 65388]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签2-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,13,82727],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 13]},
+			{"eq": ["data.rows.0.impression_num", 82727]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签2-1、投放标签2-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76789,76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,24,82727],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 24]},
+			{"eq": ["data.rows.0.impression_num", 82727]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签1-1、投放标签2-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76781,76789","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签1-1-1)(有问题)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"77127","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,136,246643],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 136]},
+			{"eq": ["data.rows.0.impression_num", 246643]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：商品标签1-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"","product_tag_id":"20974","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,2,383688],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 2]},
+			{"eq": ["data.rows.0.impression_num", 383688]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签2-2,商品标签1-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"20974","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,"3213"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+			{"eq": ["data.rows.0.impression_num", "3213"]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签2-2,品类two-piece outfits)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"800","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签2-2,sku-286024701)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"286024701","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,82727],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+			{"eq": ["data.rows.0.impression_num", 82727]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签2-2,计划IOS 【FR_PL】KZ 指定SKU)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2816416","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"800","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签2-2,新品)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"1","ad_tag_id":"76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签2-2,上架时间0915-0928)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"","create_date_start":"2018-09-15","create_date_end":"2018-09-28","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,5,82727],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 5]},
+			{"eq": ["data.rows.0.impression_num", 82727]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：商品标签1-1、品类men-tops)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"755,850,851,852,853,854,855,856","third_platform_id":"","is_new":"","ad_tag_id":"","product_tag_id":"20974","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,383688],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+			{"eq": ["data.rows.0.impression_num", 383688]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：商品标签1-1、sku277283301)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"277283301","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"","product_tag_id":"20974","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,383688],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+			{"eq": ["data.rows.0.impression_num", 383688]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：商品标签1-1、计划：IOS 【UK_PL】KZ 指定SKU)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2816415","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"","product_tag_id":"20974","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,"3967"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+			{"eq": ["data.rows.0.impression_num", "3967"]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：商品标签1-1、新品)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"1","ad_tag_id":"","product_tag_id":"20974","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：商品标签1-1、上架时间180817-180819)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"","product_tag_id":"20974","create_date_start":"2018-08-17","create_date_end":"2018-08-19","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,383688],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+			{"eq": ["data.rows.0.impression_num", 383688]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-单图：获取列表数据(条件：投放标签CA、自动选品、F、JandC)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"77622,77627,77630,77636","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,14,43909],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 14]},
+			{"eq": ["data.rows.0.impression_num", 43909]}]
+      	},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":76781},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,1,"378512",3.31459],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+            {"eq": ["data.summary.impression_num", "378512"]},
+			{"eq": ["data.summary.install_unit_price", 3.31459]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":76784},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,1,"356743",2.077195],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+            {"eq": ["data.summary.impression_num", "356743"]},
+			{"eq": ["data.summary.install_unit_price", 2.077195]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签1-1、投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76781,76784"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,2,"735255",2.452997],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+            {"eq": ["data.summary.impression_num", "735255"]},
+			{"eq": ["data.summary.install_unit_price", 2.452997]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76789"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,1,"719385",2.566247],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+            {"eq": ["data.summary.impression_num", "719385"]},
+			{"eq": ["data.summary.install_unit_price", 2.566247]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76791"},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签2-1、投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76789,76791"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,1,"719385",2.566247],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+            {"eq": ["data.summary.impression_num", "719385"]},
+			{"eq": ["data.summary.install_unit_price", 2.566247]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签1-1、投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76781,76789"},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签1-1、计划IOS【UK _MPA】KZ)(有问题)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"2816381","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":76781},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签1-1-1、暂停状态)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"4","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":77127},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,2,"419873",2.651265],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+            {"eq": ["data.summary.impression_num", "419873"]},
+			{"eq": ["data.summary.install_unit_price", 2.651265]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签1-2、1-1-1、搜索计划IOS-UK-PL KZ 自动选品)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"2814282","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"77127,76784"},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":0,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：投放标签1-1、1-2、UK)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76781,76784,77621"},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+
+
+
+
+
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：投放标签1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76781"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"57408"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+            {"eq": ["data.summary.impression_num", "57408"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76784"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"56199"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+            {"eq": ["data.summary.impression_num", "56199"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：投放标签1-1、投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76781,76784"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,3,"113607"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 3]},
+            {"eq": ["data.summary.impression_num", "113607"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76789"},
+      	"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76791"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"184778"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+            {"eq": ["data.summary.impression_num", "184778"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：投放标签2-1、投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76789,76791"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"184778"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+            {"eq": ["data.summary.impression_num", "184778"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：投放标签1-2、投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76789,76781"},
+      	"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：投放标签1-2、开启状态)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":2,"ad_set_name":"","order_field":"","order_type":"","page":"1","page_size":"10","ad_tag_id":"76784"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"10501"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+            {"eq": ["data.summary.impression_num", "10501"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：投放标签1-1、1-2、计划IOS 【US_MPA】KZ 指定SKU)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"2814220","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76784"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"56199"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+            {"eq": ["data.summary.impression_num", "56199"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：投放标签CA、M)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"77622,77630"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,3,"223445"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 3]},
+            {"eq": ["data.summary.impression_num", "223445"]}]
+		},
+
+
+
+
+
+
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76781","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,57,"435920"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 57]},
+            {"eq": ["data.summary.impression_num", "435920"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76784","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,73,"412942"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 73]},
+            {"eq": ["data.summary.impression_num", "412942"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-1、投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76781,76784","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,130,"848862"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 130]},
+            {"eq": ["data.summary.impression_num", "848862"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76789","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,58,"719385"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 58]},
+            {"eq": ["data.summary.impression_num", "719385"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76791","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,14,"184778"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 14]},
+            {"eq": ["data.summary.impression_num", "184778"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签2-1、投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76789,76791","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,72,"904163"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 72]},
+            {"eq": ["data.summary.impression_num", "904163"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-1、投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"76781,76789","page":1,"page_size":10},
+        "assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","ad_tag_id":"77127","page":1,"page_size":10},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,31,"419873"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 31]},
+            {"eq": ["data.summary.impression_num", "419873"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-1，状态开启)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"2","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"76781","combination_tag_id":"","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,7,"38865"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 7]},
+            {"eq": ["data.summary.impression_num", "38865"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-1，模板：多sku轮播组-1个sku多张)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"7659464","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"76781","combination_tag_id":"","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,8,"148016"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 8]},
+            {"eq": ["data.summary.impression_num", "148016"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-1，品类-men-tops)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"755,850,851,852,853,854,855,856","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"76781","combination_tag_id":"","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,9,"168002"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 9]},
+            {"eq": ["data.summary.impression_num", "168002"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-1，sku-234001021)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"215554","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"76781","combination_tag_id":"","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"65872"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+            {"eq": ["data.summary.impression_num", "65872"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-1，选品时间18-10-15)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"2018-10-15 00:00:00","end_select_time":"2018-10-15 00:00:00","latest_serving_date":"","index_condition_id":"","ad_tag_id":"76781","combination_tag_id":"","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,21,"148866"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+            {"eq": ["data.summary.impression_num", "148866"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签1-2，投放标签M)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"76784,77631","combination_tag_id":"","page":"1","page_size":"20","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,6,"45698"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 6]},
+            {"eq": ["data.summary.impression_num", "45698"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签UK)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"77621","combination_tag_id":"","page":"1","page_size":"20","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,77,"1018286"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 77]},
+            {"eq": ["data.summary.impression_num", "1018286"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签UK、指定sku)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"77621,77626","combination_tag_id":"","page":"1","page_size":"20","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,19,"298901"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 19]},
+            {"eq": ["data.summary.impression_num", "298901"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签UK、指定sku、M)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"77621,77626,77631","combination_tag_id":"","page":"1","page_size":"20","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,8,"147511"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 8]},
+            {"eq": ["data.summary.impression_num", "147511"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：获取列表数据(条件：投放标签UK、指定sku、M、null)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","ad_tag_id":"77621,77626,77631,77634","combination_tag_id":"","page":"1","page_size":"20","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,6,"71241"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 6]},
+            {"eq": ["data.summary.impression_num", "71241"]}]
+      	},
+
+
+
+
+
+
+
+
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签1-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76781","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,18,148016],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 18]},
+            {"eq": ["data.rows.0.impression_num", 148016]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签1-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76784","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",2,"impression_num"]],
+		"assertExpect":[0,20,73069],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 20]},
+            {"eq": ["data.rows.2.impression_num", 73069]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签1-1、投放标签1-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76781,76784","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",2,"impression_num"]],
+		"assertExpect":[0,23,111739],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 23]},
+            {"eq": ["data.rows.2.impression_num", 111739]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签2-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76789","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,17,202326],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 17]},
+            {"eq": ["data.rows.0.impression_num", 202326]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签2-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76791","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,10,158707],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 10]},
+            {"eq": ["data.rows.0.impression_num", 158707]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签2-1、投放标签2-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76789,76791","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,19,361033],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 19]},
+            {"eq": ["data.rows.0.impression_num", 361033]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签1-1、投放标签2-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"76781,76789","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：模板标签-文案-促销标签)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"","template_tag_id":"70693"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,9,492634],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 9]},
+            {"eq": ["data.rows.0.impression_num", 492634]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签2-1、模板标签-文案-促销标签)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"76789","template_tag_id":"70693"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,7],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 7]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签2-1、计划IOS 【FR_PL】KZ 指定SKU)(有问题)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"58831,58830","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"76789","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签2-1、状态激活)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"1","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"76789","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,14],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 14]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签2-2、计划IOS-FR-mpa KZ 自动选品)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2815818","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"46891,46890,46885,46876","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"76791","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,10,158707],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 10]},
+            {"eq": ["data.rows.0.impression_num", 158707]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签2-2、M)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"20","index_condition_id":"","ad_tag_id":"76791,77631","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,10,158707],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 10]},
+            {"eq": ["data.rows.0.impression_num", 158707]}]
+      	},
+		{
+		"id":15,
+		"Document":"模板分析-轮播：获取列表数据(条件：投放标签UK、指定sku、M、null)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/templateList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","start_date":"2018-10-15","end_date":"2018-10-21","size_id":"","status":"","ad_set_id":"","tag":"","category_id":"","country":"","creative_id":"","creative_type":"carousel","trend_item":"click_ratio","order_field":"","order_type":"","page":"1","page_size":"10","index_condition_id":"","ad_tag_id":"77621,77626,77631,77634","template_tag_id":""},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,4,63002],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 4]},
+            {"eq": ["data.rows.0.impression_num", 63002]}]
+      	},
+
+
+
+
+
+
+		{
+		"id":17,
+		"Document":"元素分析-轮播：获取列表数据(条件：投放标签1-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76781","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,250,420],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 250]},
+            {"eq": ["data.list.0.impression_num", 420]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-轮播：获取列表数据(条件：投放标签1-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76784","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,266,4896],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 266]},
+            {"eq": ["data.list.0.impression_num", 4896]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-轮播：获取列表数据(条件：投放标签1-1、投放标签1-2)(有问题)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76781,76784","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,408,4896],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 408]},
+            {"eq": ["data.list.0.impression_num", 4896]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-轮播：获取列表数据(条件：投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76789","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary_total","impression_num"]],
+		"assertExpect":[0,238,719385],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 238]},
+            {"eq": ["data.summary_total.impression_num", 719385]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-轮播：获取列表数据(条件：投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76791","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary_total","impression_num"]],
+		"assertExpect":[0,82,184778],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 82]},
+            {"eq": ["data.summary_total.impression_num", 184778]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-轮播：获取列表数据(条件：投放标签2-1、投放标签2-2)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76789,76791","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,284,3170],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 284]},
+            {"eq": ["data.list.0.impression_num", 3170]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-轮播：获取列表数据(条件：投放标签1-1、投放标签2-1)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76781,76789","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-轮播：获取列表数据(条件：投放标签1-1，计划分析：IOS【UK _MPA】KZ 指定SKU)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","campaign_id":"2816381","ad_set_id":"58798,58791,58640,58639,58638","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"76781","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"3","page_size":"100","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-轮播：获取列表数据(条件：元素标签-红hotsale)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"","element_tag_id":"77540","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,1,392287],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+            {"eq": ["data.list.0.impression_num", 392287]}]
+      	},
+		{
+		"id":17,
+		"Document":"元素分析-轮播：获取列表数据(条件：投放标签-UK、指定sku、M、null)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Element/queryElementTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","campaign_id":"","ad_set_id":"","creative_id":"","size_id":"","category_id":"","product_id":"","index_condition_id":"","ad_tag_id":"77621,77626,77631,77634","element_tag_id":"","trend_index":"impression_num,click_num,click_ratio,charge,cpc,cpm","hide_single":"false","page":"1","page_size":"10","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,26,1521],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 26]},
+            {"eq": ["data.list.0.impression_num", 1521]}]
+      	},
+
+
+
+
+
+
+
+
+
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签2-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76789","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,181,176603],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 181]},
+            {"eq": ["data.rows.0.impression_num", 176603]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签2-2)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,39,114341],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 39]},
+            {"eq": ["data.rows.0.impression_num", 114341]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签1-1-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"77127","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,46,152995],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 46]},
+            {"eq": ["data.rows.0.impression_num", 152995]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：商品标签1-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"","product_tag_id":"20974","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,301489],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+            {"eq": ["data.rows.0.impression_num", 301489]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签2-2,商品标签1-1)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"20974","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,2565],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+            {"eq": ["data.rows.0.impression_num", 2565]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签2-2,品类two-piece outfits)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"856","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,1],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签2-2,sku-279727405)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"279727405","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,43685],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+            {"eq": ["data.rows.0.impression_num", 43685]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签2-2,计划IOS【UK _MPA】KZ 指定SKU)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2816381","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"800","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签2-2,新品)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"1","ad_tag_id":"76791","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签2-2,上架时间0915-0928)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"76791","product_tag_id":"","create_date_start":"2018-09-15","create_date_end":"2018-09-28","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,8,"102286"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 8]},
+            {"eq": ["data.rows.0.impression_num", "102286"]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品分析-轮播：获取列表数据(条件：投放标签UK、指定sku、M、null)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","ad_tag_id":"77621,77626,77631,77634","product_tag_id":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,13,71241],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 13]},
+            {"eq": ["data.rows.0.impression_num", 71241]}]
+      	}
+
+
+    ]
+}

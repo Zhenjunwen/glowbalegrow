@@ -1,0 +1,795 @@
+
+
+
+{
+	"filename":"autoPush",
+	"skip": true,
+	"停用":[
+		{
+		"id":2,
+		"Document":"获取计划名",
+		"Request_Method":"GET",
+		"Request_URL":"/advertise/Project/getProject",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0]
+      	}
+	],
+	"RECORDS": [
+		{
+		"id":0,
+		"Document":"通用-左边树",
+		"Request_Method":"GET",
+		"Request_URL":"/serving/aiserving/Delivery/projectTree",
+		"Request_Headers":"",
+		"Request_Params":{"keyword_type":"target"},
+		"Request_Data":"",
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.list.0.list.39.id", "2750159_2813666"]}]
+      	},
+		{
+		"id":1,
+		"Document":"通用-左边树-单元搜索框-1015-26，mpa，fr，15-45，F，m，fb，null，ios，null",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/projectTree",
+		"Request_Headers":"",
+		"Request_Params":{"keyword_type":"target","keyword":"1015-26，mpa，fr，15-45，F，m，fb，null，ios，null"},
+		"Request_Data":"",
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.list.0.list.0.list.0.id", "2750159_2815256_23843058746360695"]}]
+      	},
+		{
+		"id":2,
+		"Document":"通用-左边树-创意搜索框-1015_26_1015-26，mpa，fr，15-45，F，m，fb，null，ios，null",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/projectTree",
+		"Request_Headers":"",
+		"Request_Params":{"keyword_type":"creative","keyword":"1015_26_1015-26，mpa，fr，15-45，F，m，fb，null，ios，null"},
+		"Request_Data":"",
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.list.0.list.0.list.0.id", "2750159_2815256_23843058746360695"]}]
+      	},
+		{
+		"id":3,
+		"Document":"通用-左边树-计划搜索框-IOS 【FR_MPA】KZ 指定SKU",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/projectTree",
+		"Request_Headers":"",
+		"Request_Params":{"keyword_type":"campaign","keyword":"IOS 【FR_MPA】KZ 指定SKU"},
+		"Request_Data":"",
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.list.0.list.0.list.0.id", "2750159_2815256_23843058746360695"]}]
+      	},
+	  	{
+		"id":4,
+		"Document":"计划列表-获取子账号",
+		"Request_Method":"GET",
+		"Request_URL":"/user/SubAccount/queryAuthSubAccount",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":5,
+		"Document":"计划列表-获取表头配置",
+		"Request_Method":"POST",
+		"Request_URL":"/aiserving/SelectProduct/queryCustomData",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"key":"_INDICATOR_SETTING_AUTO_PUSH"},
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", "[\"impression_num\",\"click_num\",\"install_num\",\"cpi\",\"ctr\",\"roas\",\"cpm\",\"charge\",\"app_custom_event.fb_mobile_purchase_value\"]"]}]
+      	},
+		{
+		"id":6,
+		"Document":"计划列表-推送结果大红点",
+		"Request_Method":"POST",
+		"Request_URL":"/aiserving/Creative/queryFailPushList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"campaign_id":"","project_id":"2750159"},
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.count", 0]}]
+      	},
+		{
+		"id":7,
+		"Document":"计划列表-获取计划列表",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,47],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 47]}]
+      	},
+        {
+		"id":8,
+		"Document":"计划列表-获取计划列表（开启状态）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","start_time":"","end_time":"","third_campaign_state":"2","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,2],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]}]
+      	},
+        {
+		"id":9,
+		"Document":"计划列表-获取计划列表（暂停状态）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","start_time":"","end_time":"","third_campaign_state":"3","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,38],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 38]}]
+      	},
+		{
+		"id":10,
+		"Document":"计划列表-获取计划列表（查询0915-1015）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","start_time":"2018-09-15","end_time":"2018-10-15","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,8],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 8]}]
+      	},
+		{
+		"id":11,
+		"Document":"计划列表-获取计划列表（查询：计划名字IOS 【FR_MPA】KZ 指定SKU）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","start_time":"","end_time":"","third_campaign_state":"","campaign_id":"IOS 【FR_MPA】KZ 指定SKU","campaign_name":"IOS 【FR_MPA】KZ 指定SKU","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,1,132534],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.list.0.impression_num", 132534]}]
+      	},
+		{
+		"id":12,
+		"Document":"计划列表-获取计划列表（查询：计划ID_2815256）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","start_time":"","end_time":"","third_campaign_state":"","campaign_id":"2815256","campaign_name":"2815256","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,1,132534],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.list.0.impression_num", 132534]}]
+      	},
+		{
+		"id":13,
+		"Document":"计划列表-获取计划列表（查询：选品数10）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","start_time":"","end_time":"","third_campaign_state":"","campaign_id":"","campaign_name":"","select_num":"10","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,2],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]}]
+      	},
+		{
+		"id":14,
+		"Document":"计划列表-获取计划列表（查询：选品数>10）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","start_time":"","end_time":"","third_campaign_state":"","campaign_id":"","campaign_name":"","select_num":">10","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,24],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 24]}]
+      	},
+		{
+		"id":15,
+		"Document":"计划列表-获取计划列表（查询：创意数33）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","start_time":"","end_time":"","third_campaign_state":"","campaign_id":"","campaign_name":"","creative_num":"33","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,1],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]}]
+      	},
+		{
+		"id":16,
+		"Document":"计划列表-获取计划列表（查询：创意数>35）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","start_time":"","end_time":"","third_campaign_state":"","campaign_id":"","campaign_name":"","creative_num":">35","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,11],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 11]}]
+      	},
+		{
+		"id":17,
+		"Document":"计划列表-获取计划列表（每页50条）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","page":"1","page_size":"50"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","page"]],
+		"assertExpect":[0,47,1],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 47]},
+			{"eq": ["data.page", 1]}]
+      	},
+		{
+		"id":18,
+		"Document":"计划列表-获取计划列表（查询0915-1015、已暂停）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","third_campaign_state":"3","start_time":"2018-09-15","end_time":"2018-10-15","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,7],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 7]}]
+      	},
+		{
+		"id":19,
+		"Document":"计划列表-获取计划列表（查询0915-1015、已暂停、选品数<5、创意数<2）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/campaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","third_platform_id":"1","third_campaign_state":"3","start_time":"2018-09-15","end_time":"2018-10-15","select_num":"<5","creative_num":"<2","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,3],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 3]}]
+      	},
+		{
+		"id":20,
+		"Document":"计划列表-获取项目同步信息",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/getProjectInfo",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","sync_code"]],
+		"assertExpect":[0,1],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.sync_code", 1]}]
+      	},
+		{
+		"id":21,
+		"Document":"单元列表-获取计划设置创意数（计划：IOS 【FR_PL】KZ 指定SKU）",
+		"Request_Method":"POST",
+		"Request_URL":"/aiserving/Delivery/getConfig",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"campaign_id":"2816416","third_target_id":""},
+        "assertRq":[["code"],["data","delivery_number"]],
+		"assertExpect":[0,"5"],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.delivery_number", "5"]}]
+      	},
+		{
+		"id":22,
+		"Document":"单元列表-获取计划自动开关（计划：IOS 【FR_PL】KZ 指定SKU）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/getAutoDeliveryConfig",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","auto_delivery"]],
+		"assertExpect":[0,0],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.auto_delivery", 0]}]
+      	},
+		{
+		"id":23,
+		"Document":"单元列表-获取计划同步信息（计划：IOS 【FR_PL】KZ 指定SKU）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/getCampaignInfo",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","third_campaign_id"],["data","campaign_name"]],
+		"assertExpect":[0,"23843058829610695","IOS 【FR_PL】KZ 指定SKU"],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.third_campaign_id", "23843058829610695"]},
+			{"eq": ["data.campaign_name", "IOS 【FR_PL】KZ 指定SKU"]}]
+      	},
+		{
+		"id":24,
+		"Document":"单元列表-获取单元列表（计划：IOS 【FR_PL】KZ 指定SKU）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/targetList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2816416","third_platform_id":1,"indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,2,81887],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+			{"eq": ["data.list.0.impression_num", 81887]}]
+      	},
+		{
+		"id":25,
+		"Document":"单元列表-获取自定义deeplink（计划：IOS 【FR_PL】KZ 指定SKU）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Landingpagelink/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","type":1,"status":1},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,0],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]}]
+      	},
+		{
+		"id":26,
+		"Document":"创意列表-获取单元设置创意数（单元：1015-34，pl，fr，15-45，M，m，fb，null，ios，null）",
+		"Request_Method":"POST",
+		"Request_URL":"/aiserving/Delivery/getConfig",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"campaign_id":"2816416","third_target_id":"23843058849370695"},
+        "assertRq":[["code"],["data","delivery_number"]],
+		"assertExpect":[0,"5"],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.delivery_number", "5"]}]
+      	},
+		{
+		"id":27,
+		"Document":"创意列表-获取单元自动开关（单元：1015-34，pl，fr，15-45，M，m，fb，null，ios，null）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/getAutoDeliveryConfig",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416","third_target_id":"23843058849370695"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","auto_delivery"]],
+		"assertExpect":[0,0],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.auto_delivery", 0]}]
+      	},
+		{
+		"id":28,
+		"Document":"创意列表-获取单元同步信息（单元：1015-34，pl，fr，15-45，M，m，fb，null，ios，null）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/getTargetInfo",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416","third_target_id":"23843058849370695"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","third_target_status"]],
+		"assertExpect":[0,"PAUSED"],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.third_target_status", "PAUSED"]}]
+      	},
+		{
+		"id":29,
+		"Document":"创意列表-获取创意列表（单元：1015-34，pl，fr，15-45，M，m，fb，null，ios，null）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416","third_target_id":"23843058849370695","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","creative_type":"banner","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,4,68839],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 4]},
+			{"eq": ["data.list.0.impression_num", 68839]}]
+      	},
+		{
+		"id":30,
+		"Document":"创意列表-获取创意列表（搜索条件：低曝光）（单元：1015-34，pl，fr，15-45，M，m，fb，null，ios，null）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416","third_target_id":"23843058849370695","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","creative_type":"banner","impression_range":"low","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,3,4320],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 3]},
+			{"eq": ["data.list.0.impression_num", 4320]}]
+      	},
+		{
+		"id":31,
+		"Document":"创意列表-获取创意列表（搜索条件：正常投放中）（单元：1015-34，pl，fr，15-45，M，m，fb，null，ios，null）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416","third_target_id":"23843058849370695","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","creative_type":"banner","status":"running","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,1,68839],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.list.0.impression_num", 68839]}]
+      	},
+		{
+		"id":32,
+		"Document":"创意列表-获取创意列表（搜索条件：选品Color Block Letter Patch Detail Pouch Pocket Fleece Hoodie）（单元：1015-34，pl，fr，15-45，M，m，fb，null，ios，null）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416","third_target_id":"23843058849370695","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","creative_type":"banner","keyword":"Color Block Letter Patch Detail Pouch Pocket Fleece Hoodie","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list",1,"impression_num"]],
+		"assertExpect":[0,2,4320],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+			{"eq": ["data.list.1.impression_num", 4320]}]
+      	},
+		{
+		"id":33,
+		"Document":"创意列表-获取创意列表（搜索条件：创意名称1015_3_1015-34，pl，fr，15-45，M，m，fb，null，ios，null）（单元：1015-34，pl，fr，15-45，M，m，fb，null，ios，null）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416","third_target_id":"23843058849370695","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","combination_id":"1015_3_1015-34，pl，fr，15-45，M，m，fb，null，ios，null","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,1,6518],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.list.0.impression_num", 6518]}]
+      	},
+		{
+		"id":34,
+		"Document":"创意列表-获取创意列表（高曝光、选品Contrast Color Letter Pocket Hoodie）（单元：1015-34，pl，fr，15-45，M，m，fb，null，ios，null）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416","third_target_id":"23843058849370695","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","impression_range":"high","keyword":"Contrast Color Letter Pocket Hoodie","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list"]],
+		"assertExpect":[0,0,[]],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]},
+			{"eq": ["data.list", []]}]
+      	},
+		{
+		"id":35,
+		"Document":"创意列表-获取创意列表（已暂停、创意名称1015_2_1015-34，pl，fr，15-45，M，m，fb，null，ios，null）（单元：1015-34，pl，fr，15-45，M，m，fb，null，ios，null）",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":"2816416","third_target_id":"23843058849370695","indicators":"impression_num,click_num,install_num,cpi,ctr,roas,cpm,charge,cvr","status":"stop","combination_id":"1015_2_1015-34，pl，fr，15-45，M，m，fb，null，ios，null","page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list"]],
+		"assertExpect":[0,0,[]],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]},
+			{"eq": ["data.list", []]}]
+      	},
+		{
+		"id":36,
+		"Document":"推送结果-获取筛选框数据",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/getPushParams",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"],["data",16,"campaign_id"]],
+		"assertExpect":[0,2815864],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.16.campaign_id", 2814283]}]
+      	},
+		{
+		"id":37,
+		"Document":"推送结果-获取列表数据",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","removed"]],
+		"assertExpect":[0,930,140],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 764]},
+			{"eq": ["data.count.removed", 139]}]
+      	},
+		{
+		"id":38,
+		"Document":"推送结果-获取列表数据(查询时间：1015-1021)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","suspend"]],
+		"assertExpect":[0,22,22],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 17]},
+			{"eq": ["data.count.suspend", 17]}]
+      	},
+		{
+		"id":39,
+		"Document":"推送结果-获取列表数据(状态：推送失败)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","status":"push_fail"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,0],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]}]
+      	},
+		{
+		"id":40,
+		"Document":"推送结果-获取列表数据(状态：已删除)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","status":"removed"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","removed"]],
+		"assertExpect":[0,140,140],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 139]},
+			{"eq": ["data.count.removed", 139]}]
+      	},
+		{
+		"id":41,
+		"Document":"推送结果-获取列表数据(状态：正常投放)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","status":"working"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","working"]],
+		"assertExpect":[0,568,568],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 532]},
+			{"eq": ["data.count.working", 532]}]
+      	},
+		{
+		"id":42,
+		"Document":"推送结果-获取列表数据(类型：mpa)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","spotting":"mpa"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","removed"]],
+		"assertExpect":[0,133,13],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 76]},
+			{"eq": ["data.count.removed", 13]}]
+      	},
+		{
+		"id":43,
+		"Document":"推送结果-获取列表数据(类型：pl)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","spotting":"pl"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","removed"]],
+		"assertExpect":[0,797,127],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 688]},
+			{"eq": ["data.count.removed", 126]}]
+      	},
+		{
+		"id":44,
+		"Document":"推送结果-获取列表数据(计划：IOS PL KZ 自动选品)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","third_target_id":"2814283_23843011298550695,2814283_23843143386870695,2814283_23843143391730695,2814283_23843170458190695,2814283_23843170482270695,2814283_23843184588900695"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","removed"]],
+		"assertExpect":[0,88,1],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]},
+			{"eq": ["data.count", []]}]
+      	},
+		{
+		"id":45,
+		"Document":"推送结果-获取列表数据(产品名：Color Block Letter Patch Detail Pouch Pocket Fleece Hoodie)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","keyword":"Color Block Letter Patch Detail Pouch Pocket Fleece Hoodie"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","suspend"]],
+		"assertExpect":[0,16,14],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 12]},
+			{"eq": ["data.count.suspend", 12]}]
+      	},
+		{
+		"id":46,
+		"Document":"推送结果-获取列表数据(产品名：277283301)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","keyword":"277283301"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","suspend"]],
+		"assertExpect":[0,11,9],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 5]},
+			{"eq": ["data.count.suspend", 5]}]
+      	},
+		{
+		"id":47,
+		"Document":"推送结果-获取列表数据(查询时间：1015-1021、状态：推送失败)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","start_date":"2018-10-15","end_date":"2018-10-21","status": "push_fail"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count"]],
+		"assertExpect":[0,0,[]],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]},
+			{"eq": ["data.count", []]}]
+      	},
+		{
+		"id":48,
+		"Document":"推送结果-获取列表数据(查询时间：1015-1021、类型：mpa)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","start_date":"2018-10-15","end_date":"2018-10-21","spotting": "mpa"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count"]],
+		"assertExpect":[0,0,[]],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]},
+			{"eq": ["data.count", []]}]
+      	},
+		{
+		"id":49,
+		"Document":"推送结果-获取列表数据(查询时间：1015-1021、计划：IOS PL KZ 自动选品)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","start_date":"2018-10-15","end_date":"2018-10-21","third_target_id":"2814283_23843011298550695,2814283_23843143386870695,2814283_23843143391730695,2814283_23843170458190695,2814283_23843170482270695,2814283_23843184588900695"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","suspend"]],
+		"assertExpect":[0,5,5],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]},
+			{"eq": ["data.count", []]}]
+      	},
+		{
+		"id":50,
+		"Document":"推送结果-获取列表数据(查询时间：1015-1021、产品：Color Block Letter Patch Detail Pouch Pocket Fleece Hoodie)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","start_date":"2018-10-15","end_date":"2018-10-21","keyword":"Color Block Letter Patch Detail Pouch Pocket Fleece Hoodie"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","suspend"]],
+		"assertExpect":[0,5,5],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 3]},
+			{"eq": ["data.count.suspend", 3]}]
+      	}
+		,
+		{
+		"id":51,
+		"Document":"推送结果-获取列表数据(查询时间：1015-1021、产品：277283301)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","start_date":"2018-10-15","end_date":"2018-10-21","keyword":"277283301"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","suspend"]],
+		"assertExpect":[0,2,2],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 0]},
+			{"eq": ["data.data", []]}]
+      	},
+		{
+		"id":52,
+		"Document":"推送结果-获取列表数据-分页(查询时间：1015-1021、page_size：40)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"40","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","suspend"],["data","page_size"]],
+		"assertExpect":[0,22,22,40],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 17]},
+			{"eq": ["data.count.suspend", 17]},
+			{"eq": ["data.page_size", 40]}]
+      	},
+		{
+		"id":53,
+		"Document":"推送结果-获取列表数据-分页(查询时间：1015-1021、page_size：20,第二页)",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPushList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"2","page_size":"20","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","count","suspend"],["data","page_size"],["data","page"]],
+		"assertExpect":[0,22,22,20,2],
+        "validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 17]},
+			{"eq": ["data.count.suspend", 17]},
+			{"eq": ["data.page_size", 20]},
+			{"eq": ["data.page", 2]}]
+      	}
+    ]
+}

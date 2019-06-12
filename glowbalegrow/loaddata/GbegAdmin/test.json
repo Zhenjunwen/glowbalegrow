@@ -1,0 +1,92 @@
+
+
+
+{
+	"filename":"autoPush",
+	"skip":false,
+	"停用":[
+		{
+		"id":2,
+		"Document":"获取计划名",
+		"Request_Method":"GET",
+		"Request_URL":"/advertise/Project/getProject",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0]
+      	},
+		{
+		"id":0,
+		"Document":"通用-左边树",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Delivery/projectTree",
+		"Request_Headers":"",
+		"Request_Params":{"keyword_type":"target"},
+		"Request_Data":"",
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.list.0.list.39.id", "2750159_2813666"]}]
+      	}
+	],
+	"RECORDS": [
+		{
+		"id":0,
+		"Document":"投放标签-查询数据（条件：计划名IOS【CA _MPA】KZ 指定SKU）",
+		"Request_Method":"GET",
+		"Request_URL":"/dmp/label/target",
+		"Request_Headers":"",
+		"Request_Params":{"campaign_id":2815255},
+		"Request_Data":"",
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"投放标签-打标签1-1(1计划+1单元)",
+		"note":[
+			"投放标签1-1",
+			"IOS 【FR_PL】KZ 指定SKU",
+			"(IOS PL KZ 自动选品)(0919-1，pl，us，15-45，M，m，fb，null，ios，Men)",
+
+			"IOS-CA-mpa KZ 自动选品",
+			"(IOS【CA _MPA】KZ 指定SKU)([API-17]-20180919,MPA,CA,15-45,M,m,fb,274841003/277283302/278876001/280270404/274840503/276702424,ios,null)"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":5,"tag_id":76781,"action":"insert","object_id":"2816416,2814283_47607,2815819,2815255_47628"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	},
+		{
+		"id":0,
+		"Document":"投放标签-打标签1-2(1计划+2单元)",
+		"note":[
+			"投放标签1-2",
+			"IOS-CA-PL KZ 自动选品",
+			"(IOS 【US_PL】KZ 指定SKU)(1015-27，pl，us，15-45，M，m，fb，null，ios，null;  1015-30，pl，us，15-45，F，m，fb，null，ios，null)",
+
+			"IOS-US-mpa KZ 自动选品",
+			"(IOS 【US_MPA】KZ 指定SKU)(1012-14，mpa，us，15-45，F，m，fb，null，ios，Jackets & Coats;  1015-19，mpa，us，15-45，M，m，fb，null，ios，null)"
+		],
+		"Request_Method":"POST",
+		"Request_URL":"/dmp/label/add",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"tag_carry_id":5,"tag_id":76784,"action":"insert","object_id":"2816375,2816414_58824,2816414_58827,2814282,2814220_58631,2814220_58789"},
+        "assertRq":[["code"],["message"]],
+		"assertExpect":[0,"请求成功"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["message", "请求成功"]}]
+      	}
+    ]
+}

@@ -1,0 +1,594 @@
+
+
+
+{
+    "filename":"dccenter_banner",
+	"skip": true,
+	"停用":{
+		"id":23,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：投放时间——2018-09-26有问题）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"","product_id":"","select_time":"","latest_serving_date":"2018-09-26","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,12,"249437"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 12]},
+			{"eq": ["data.summary.impression_num", "249437"]}]
+      	},
+	"RECORDS": [
+	  	{
+		"id":0,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：无)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"],["data","summary","install_unit_price"]],
+		"assertExpect":[0,7,"1632690",2.490908],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 7]},
+			{"eq": ["data.summary.impression_num", "1632690"]},
+			{"eq": ["data.summary.install_unit_price", 2.490908]}]
+		},
+		{
+		"id":1,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：渠道fb)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"151","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,7,"1632690"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 7]},
+			{"eq": ["data.summary.impression_num", "1632690"]}]
+		},
+		{
+		"id":2,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：IOS-【FR_PL】KZ 指定SKUcampaign_id: 2816416)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"2816416","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"134302"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "134302"]}]
+		},
+		{
+		"id":3,
+		"Document":"计划分析-单图：获取列表数据(筛选条件：IOS-US-PL KZ自动选品campaign_id: 2814283//暂停campaign_state: 4)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","platform_id":"","ad_set_id":"","campaign_id":"2814283","campaign_state":"4","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install"},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":4,
+		"Document":"计划分析-单图：列表七日趋势图",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Project/queryStatisticsTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","aim_state":"","platform_id":"","campaign_id":"2814283,2816416,2816415,2816414,2816413,2816376,2816375,2814283","ad_set_id":"","ad_id":"","dynamic_id":"","merge":"false","type":"day","creative_type":"banner","index":"click_ratio","end_date":"2018-10-21","search_type":"campaign"},
+      	"assertRq":[["code"],["data","summary",0,"impression_num"]],
+		"assertExpect":[0,"165576"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.summary.0.impression_num", "165576"]}]
+		},
+		{
+		"id":5,
+		"Document":"计划分析-单图：计划明细-计划名字",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.Campaign/queryCampaignInfo",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2816416"},
+		"Request_Data":"",
+		"assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":6,
+		"Document":"计划分析-单图：计划明细-列表数据",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignDateStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","campaign_id":"2816416","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","type":"day","page":"1","page_size":"10","order_field":"","order_type":"","index":"impression_num,click_ratio"},
+		"assertRq":[["code"],["data","total"]],
+		"assertExpect":[0,5],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 5]}]
+      	},
+		{
+		"id":7,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：无)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","page":"1","page_size":"10"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,30,"1632690"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 30]},
+			{"eq": ["data.summary.impression_num", "1632690"]}]
+		},
+		{
+		"id":8,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：渠道fb)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"151","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","page":"1","page_size":"10"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,30,"1632690"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 30]},
+			{"eq": ["data.summary.impression_num", "1632690"]}]
+		},
+		{
+		"id":9,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：单元名字1015-9)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"58776","kpi_status":"","platform_id":"","campaign_id":"","ad_set_name":"","order_field":"","order_type":"","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","page":"1","page_size":"10"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"36236"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "36236"]}]
+		},
+        {
+		"id":10,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：单元名字1015-9、开启状态)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"58776","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":"2","ad_set_name":"","order_field":"","order_type":"","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","page":"1","page_size":"10"},
+      	"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+        {
+		"id":11,
+		"Document":"单元分析-单图：获取列表数据(筛选条件：关键字1015-9，pl，us)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":"","ad_set_name":"1015-9，pl，us","order_field":"","order_type":"","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","page":"1","page_size":"10"},
+      	"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"36236"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "36236"]}]
+		},
+		{
+		"id":12,
+		"Document":"单元分析-单图：单元明细-单元名字",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetInfo",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","ad_set_id":"58776"},
+        "assertRq":[["code"],["data","ad_set_name"],["data","campaign_name"]],
+		"assertExpect":[0,"1015-9，pl，us，15-45，M，m，fb，null，ios，Bottoms","IOS PL KZ 自动选品"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.ad_set_name", "1015-9，pl，us，15-45，M，m，fb，null，ios，Bottoms"]},
+			{"eq": ["data.campaign_name", "IOS PL KZ 自动选品"]}]
+      	},
+		{
+		"id":13,
+		"Document":"单元分析-单图：单元明细-图表数据",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.Optimize/queryOptimizeRecords",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","ad_set_id":"58776","creative_type":"banner","type":"day","index":"click_ratio","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","list",0,"click_num"]],
+		"assertExpect":[0,"5"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.list.0.click_num", "5"]}]
+      	},
+		{
+		"id":14,
+		"Document":"单元分析-单图：单元明细-列表数据",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdsetDateStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","ad_set_id":"58776","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner","order_field":"","order_type":"","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","page":"1","page_size":"10"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,5,"36236"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 5]},
+			{"eq": ["data.summary.impression_num", "36236"]}]
+      	},
+		{
+		"id":15,
+		"Document":"组合分析-单图：加载品类筛选框",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryCategoryList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"],["data","list",0,"children",0,"category_id"]],
+		"assertExpect":[0,736],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.list.0.children.0.category_id", 736]}]
+      	},
+		{
+		"id":16,
+		"Document":"组合分析-单图：加载其他筛选框",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/searchItems",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"],["data","creative",141,"code"],["data","size",3,"code"],["data","status",1,"name"]],
+		"assertExpect":[0,7710875,588,"停用"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.creative.141.code", 7710875]},
+			{"eq": ["data.size.3.code", 588]},
+			{"eq": ["data.status.1.name", "停用"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-单图：获取列表数据(无筛选条件)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"","product_id":"","select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,530,"1632690"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 530]},
+			{"eq": ["data.summary.impression_num", "1632690"]}]
+      	},
+        {
+		"id":18,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：单元筛选0919-1，pl，us，15-45）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"47607","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"","product_id":"","select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,8,"246931"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 8]},
+			{"eq": ["data.summary.impression_num", "246931"]}]
+      	},
+        {
+		"id":19,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：单元筛选0919-1，pl，us，15-45、暂停状态）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"47607","creative_id":"","size_id":"","combination_state":"3","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"","product_id":"","select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,7,"11391"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 7]},
+			{"eq": ["data.summary.impression_num", "11391"]}]
+      	},
+        {
+		"id":20,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：模板2018.9.27-12）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"7694239","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"","product_id":"","select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,84,"195216"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 84]},
+			{"eq": ["data.summary.impression_num", "195216"]}]
+      	},
+        {
+		"id":21,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：品类女装sweaters）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"805","product_id":"","select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,122,"171806"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 122]},
+			{"eq": ["data.summary.impression_num", "171806"]}]
+      	},
+        {
+		"id":22,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：skuID_277283301）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"","product_id":"255201","select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,12,"249437"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 12]},
+			{"eq": ["data.summary.impression_num", "249437"]}]
+      	},
+
+        {
+		"id":24,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：最后选品时间——2018-09-26->2018-09-26）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"","product_id":"","start_select_time":"2018-09-26 00:00:00","end_select_time":"2018-09-26 00:00:00","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"253276"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+			{"eq": ["data.summary.impression_num", "253276"]}]
+      	},
+        {
+		"id":25,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：单元筛选0919-1，pl，us，15-45、模板2018.9.27-12）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"47607","creative_id":"7694239","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"157"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "157"]}]
+      	},
+        {
+		"id":26,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：单元筛选0919-1，pl，us，15-45、skuID_277283301）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"47607","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"","product_id":"255201","start_select_time":"","end_select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,4,"239870"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 4]},
+			{"eq": ["data.summary.impression_num", "239870"]}]
+      	},
+        {
+		"id":27,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：单元筛选0919-1，pl，us，15-45、品类女装sweaters有问题dev修复）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"47607","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"805","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+      	},
+		{
+		"id":28,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：单元筛选0919-1，pl，us，15-45、品类男装hoodies & sweatshirts）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"47607","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"852","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,7,"235540"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 7]},
+			{"eq": ["data.list.0.impression_num", "235540"]}]
+      	},
+		{
+		"id":29,
+		"Document":"组合分析-单图：获取列表数据（筛选条件：单元筛选0919-1，pl，us，15-45、品类男装jackets & coats）",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"banner","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"47607","creative_id":"","size_id":"","combination_state":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","category_id":"854","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","order_field":"","order_type":"","page":"1","page_size":"10"},
+        "assertRq":[["code"],["data","total"],["data","list",0,"impression_num"]],
+		"assertExpect":[0,1,"157"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "157"]}]
+      	},
+        {
+		"id":28,
+		"Document":"组合分析-单图：sku和产品名查询接口Color Block Letter Patch Detail Pouch Pocket Fleece Hoodie",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Product/queryAiProductList",
+		"Request_Headers":"",
+		"Request_Params":{"product_key":"Color Block Letter Patch Detail Pouch Pocket Fleece Hoodie","creative_type":"banner","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","total"],["data","list",2,"sku"]],
+		"assertExpect":[0,34,"277283332"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 34]},
+			{"eq": ["data.list.2.sku", "277283332"]}]
+      	},
+		{
+		"id":29,
+		"Document":"产品分析-单图：获取汇总数据",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/basicInfo",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_num"]],
+		"assertExpect":[0,1832],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_num", 1832]}]
+      	},
+		{
+		"id":30,
+		"Document":"产品分析-单图：获取列表数据",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","page":"1","page_size":"10","creative_type":"banner"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,165],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 165]}]
+      	},
+		{
+		"id":31,
+		"Document":"产品分析-单图：获取列表数据（筛选条件：女装sweaters）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"807","third_platform_id":"","is_new":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"banner"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,25],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 25]}]
+      	},
+		{
+		"id":32,
+		"Document":"产品分析-单图：获取列表数据（筛选条件：sku_279664604）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"279664604","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"banner"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,1],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]}]
+      	},
+		{
+		"id":33,
+		"Document":"产品分析-单图：获取列表数据（筛选条件：计划IOS-US-PL KZ 自动选品）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2814283","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"banner"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,75],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 75]}]
+      	},
+		{
+		"id":34,
+		"Document":"产品分析-单图：获取列表数据（筛选条件：新品）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"1","create_date_start":"","create_date_end":"","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"banner"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	},
+		{
+		"id":35,
+		"Document":"产品分析-单图：获取列表数据（筛选条件：上架时间10月9日-11日）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","create_date_start":"2018-10-09","create_date_end":"2018-10-11","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"banner"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,8],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 8]}]
+      	},
+		{
+		"id":36,
+		"Document":"产品分析-单图：获取列表数据（筛选条件：女装sweaters、sku_285485303）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"285485303","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"805","third_platform_id":"","is_new":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"banner"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,1],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]}]
+      	},
+		{
+		"id":37,
+		"Document":"产品分析-单图：获取列表数据（筛选条件：女装sweaters、sku_285485303、上架时间10月9日-11日）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"285485303","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"805","third_platform_id":"","is_new":"","create_date_start":"2018-10-09","create_date_end":"2018-10-11","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"banner"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 0]}]
+      	}
+    ]
+}

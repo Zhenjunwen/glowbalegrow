@@ -1,0 +1,670 @@
+
+
+
+{
+	"filename":"dccenter_carousel",
+	"skip": true,
+	"停用":[{
+		"id":26,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：最后投放时间2018-11-12有问题)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"2018-11-12","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"170566"]
+      	},
+		{
+		"id":32,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：IOS-UK-mpa KZ 自动选品、品类_女装sweaters、最后投放时间_2018-11-12有问题)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"87636,87635,87634,82725,62392,58782,58165,46887,46886,46883,46881,46880,46879,46878,46877","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"805","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"2018-11-12","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]]
+      	}],
+	"RECORDS": [
+	  	{
+		"id":0,
+		"Document":"计划分析-轮播：获取计划单元列表",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.campaign/queryCampaignList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","platform":"","creative_type":"carousel","start_date":"2018-10-15","end_date":"2018-10-21","page_size":"100000"},
+		"assertRq":[["code"],["data",7,"campaign_id"]],
+		"assertExpect":[0,2815818],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.7.campaign_id", 2815818]}]
+		},
+		{
+		"id":1,
+		"Document":"计划分析-轮播：获取列表数据(无筛选条件)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,8,"2494724"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 8]},
+			{"eq": ["data.summary.impression_num", "2494724"]}]
+		},
+		{
+		"id":2,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：渠道FB)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"151","ad_set_id":"","campaign_id":"","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,8,"2494724"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 8]},
+			{"eq": ["data.summary.impression_num", "2494724"]}]
+		},
+		{
+		"id":3,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：计划_IOS-UK-mpa KZ 自动选品)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"2815817","campaign_state":"","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,1,"719385"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "719385"]}]
+		},
+		{
+		"id":4,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：开启状态)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"2","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install"},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":5,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：开启状态)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"","campaign_state":"4","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,8,"2494724"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 8]},
+			{"eq": ["data.summary.impression_num", "2494724"]}]
+		},
+		{
+		"id":5,
+		"Document":"计划分析-轮播：获取列表数据(筛选条件：计划_IOS-UK-mpa KZ 自动选品、关闭状态)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Campaign/queryCampaignStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","platform_id":"","ad_set_id":"","campaign_id":"2815817","campaign_state":"3","kpi_status":"","order_field":"","order_type":"","page":"1","page_size":"10","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install"},
+		"assertRq":[["code"],["data"]],
+		"assertExpect":[0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", []]}]
+		},
+		{
+		"id":6,
+		"Document":"计划分析-轮播：列表七日趋势图",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Project/queryStatisticsTrend",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","aim_state":"","platform_id":"","campaign_id":"2814220,2815817,2815819,2814282,2816381,2815255,2815818,2815256,2814220","ad_set_id":"","ad_id":"","dynamic_id":"","merge":"false","type":"day","creative_type":"carousel","index":"click_ratio","end_date":"2018-10-21","search_type":"campaign"},
+      	"assertRq":[["code"],["data","summary",7,"impression_num"]],
+		"assertExpect":[0,"356127"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.summary.7.impression_num", "356127"]}]
+		},
+		{
+		"id":7,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：无)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":"","ad_set_name":"","order_field":"","order_type":"","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","page":"1","page_size":"10","index_condition_id":""},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,36,"2494724"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 36]},
+			{"eq": ["data.summary.impression_num", "2494724"]}]
+      	},
+		{
+		"id":8,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：渠道fb)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"151","campaign_id":"","third_ad_set_state":"","ad_set_name":"","order_field":"","order_type":"","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","page":"1","page_size":"10","index_condition_id":""},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,36,"2494724"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 36]},
+			{"eq": ["data.summary.impression_num", "2494724"]}]
+      	},
+		{
+		"id":9,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：计划_IOS-UK-mpa KZ 自动选品)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"87636,87635,87634,82725,62392,58782,58165,46887,46886,46883,46881,46880,46879,46878,46877","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":"","ad_set_name":"","order_field":"","order_type":"","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","page":"1","page_size":"10","index_condition_id":""},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,6,"719385"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 6]},
+			{"eq": ["data.summary.impression_num", "719385"]}]
+      	},
+		{
+		"id":10,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：状态_开启)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":"2","ad_set_name":"","order_field":"","order_type":"","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","page":"1","page_size":"10","index_condition_id":""},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"67909"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+			{"eq": ["data.summary.impression_num", "67909"]}]
+      	},
+		{
+		"id":11,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：关键字_1012)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":"","ad_set_name":"1012","order_field":"","order_type":"","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","page":"1","page_size":"10","index_condition_id":""},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,5,"247970"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 5]},
+			{"eq": ["data.summary.impression_num", "247970"]}]
+      	},
+		{
+		"id":12,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：计划_IOS-UK-mpa KZ 自动选品、状态暂停)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"87636,87635,87634,82725,62392,58782,58165,46887,46886,46883,46881,46880,46879,46878,46877","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":"4","ad_set_name":"","order_field":"","order_type":"","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","page":"1","page_size":"10","index_condition_id":""},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,6,"719385"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 6]},
+			{"eq": ["data.summary.impression_num", "719385"]}]
+      	},
+		{
+		"id":13,
+		"Document":"单元分析-轮播：获取列表数据(筛选条件：计划_IOS-UK-mpa KZ 自动选品、状态暂停、关键字0912)",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.AdSet/queryAdSetStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","ad_set_id":"87636,87635,87634,82725,62392,58782,58165,46887,46886,46883,46881,46880,46879,46878,46877","kpi_status":"","platform_id":"","campaign_id":"","third_ad_set_state":"4","ad_set_name":"0912","order_field":"","order_type":"","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","page":"1","page_size":"10","index_condition_id":""},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,4,"541756"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 4]},
+			{"eq": ["data.summary.impression_num", "541756"]}]
+      	},
+		{
+		"id":14,
+		"Document":"单元分析-轮播：单元明细-单元名字",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdSetInfo",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","ad_set_id":"46881"},
+        "assertRq":[["code"],["data","ad_set_name"],["data","campaign_name"]],
+		"assertExpect":[0,"0912-5，mpa，gb，15-45，M，m，fb，null，ios，Men","IOS-UK-mpa KZ 自动选品"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.ad_set_name", "0912-5，mpa，gb，15-45，M，m，fb，null，ios，Men"]},
+			{"eq": ["data.campaign_name", "IOS-UK-mpa KZ 自动选品"]}]
+      	},
+		{
+		"id":15,
+		"Document":"单元分析-轮播：单元明细-图表数据",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.Optimize/queryOptimizeRecords",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","ad_set_id":"46881","creative_type":"carousel","type":"day","index":"click_ratio","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","list",6,"click_num"]],
+		"assertExpect":[0,"505"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.list.6.click_num", "505"]}]
+      	},
+		{
+		"id":16,
+		"Document":"单元分析-轮播：单元明细-列表数据",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.AdSet/queryAdsetDateStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","ad_set_id":"46881","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel","order_field":"","order_type":"","index":"impression_num,click_num,click_ratio,charge,app_custom_event.fb_mobile_purchase_value,install_unit_price,mobile_app_install","page":"1","page_size":"10"},
+		"assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,7,"290495"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 7]},
+			{"eq": ["data.summary.impression_num", "290495"]}]
+      	},
+		{
+		"id":17,
+		"Document":"组合分析-轮播：加载品类筛选框",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryCategoryList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"],["data","list",0,"children",0,"category_id"]],
+		"assertExpect":[0,736],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.list.0.children.0.category_id", 736]}]
+      	},
+		{
+		"id":18,
+		"Document":"组合分析-轮播：加载其他筛选框",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Template/searchItems",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"],["data","creative",141,"code"],["data","size",3,"code"],["data","status",1,"name"]],
+		"assertExpect":[0,7710875,588,"停用"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.creative.141.code", 7710875]},
+			{"eq": ["data.size.3.code", 588]},
+			{"eq": ["data.status.1.name", "停用"]}]
+      	},
+		{
+		"id":19,
+		"Document":"组合分析-轮播：加载尺寸筛选框",
+		"Request_Method":"POST",
+		"Request_URL":"/creative/Size/querySizeList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"type": "creative","creative_id": "7656416,7656417,7656418,7656419,7656420,7656421,7656470,7656471,7656472,7656473,7656507,7656508,7656509,7656510,7656511,7656512,7656513,7656514,7659450,7659457,7659461,7659462,7659464,7659465,7659466,7659467,7674073,7674074,7674075,7674076,7684204,7684205,7684206,7684207,7684208,7684209,7686340,7686341,7686342,7686343,7686344,7686345,7686458,7686461,7686670,7686672,7687599,7687600,7687602,7687607,7687608,7687609,7689720,7689721,7689722,7689723,7689724,7689725,7689827,7689828,7689829,7689830,7689831,7689832,7691952,7691953,7691954,7693716,7693717,7693718,7693722,7693723,7693724,7693725,7693726,7693727,7694130,7694131,7694158,7694166,7694167,7694170,7694232,7694234,7694235,7694237,7694238,7694239,7696421,7696507,7696508,7696509,7696521,7696522,7698163,7698165,7698166,7698167,7698168,7698169,7698170,7698172,7698173,7698175,7698176,7698177,7698218,7698221,7698224,7698227,7698229,7698280,7698281,7698282,7698283,7698284,7701586,7701587,7701588,7701589,7701590,7704989,7704990,7704991,7704992,7704993,7704994,7704995,7704996,7704997,7707834,7707835,7707836,7707837,7707838,7707839,7707840,7707841,7707842,7710542,7710874,7710875"},
+        "assertRq":[["code"],["data",3,"text"]],
+		"assertExpect":[0,"800x800"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.3.text", "800x800"]}]
+      	},
+		{
+		"id":20,
+		"Document":"组合分析-轮播：获取列表数据(无筛选条件)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,283,"2494724"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 283]},
+			{"eq": ["data.summary.impression_num", "2494724"]}]
+      	},
+		{
+		"id":21,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：IOS-UK-mpa KZ 自动选品)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"58782,58165,46887,46886,46883,46881","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,58,"719385"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 58]},
+			{"eq": ["data.summary.impression_num", "719385"]}]
+      	},
+		{
+		"id":22,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：状态开启)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"2","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,38,"861641"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 38]},
+			{"eq": ["data.summary.impression_num", "861641"]}]
+      	},
+		{
+		"id":23,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：模板8.29-1080-3)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"7687602","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,24,"243167"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 24]},
+			{"eq": ["data.summary.impression_num", "243167"]}]
+      	},
+		{
+		"id":24,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：品类女装sweaters)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"805","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,63,"332388"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 63]},
+			{"eq": ["data.summary.impression_num", "332388"]}]
+      	},
+		{
+		"id":25,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：sku_272851111)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"278435","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"170566"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+			{"eq": ["data.summary.impression_num", "170566"]}]
+      	},
+
+		{
+		"id":27,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：选品时间2018-09-21 00:00:00有问题)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"2018-09-21 00:00:00","end_select_time":"2018-09-21 00:00:00","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,3,"250233"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 3]},
+			{"eq": ["data.summary.impression_num", "250233"]}]
+      	},
+		{
+		"id":28,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：IOS-UK-mpa KZ 自动选品、状态开启)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"87636,87635,87634,82725,62392,58782,58165,46887,46886,46883,46881,46880,46879,46878,46877","combination_state":"2","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,6,"326111"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 6]},
+			{"eq": ["data.summary.impression_num", "326111"]}]
+      	},
+		{
+		"id":29,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：IOS-UK-mpa KZ 自动选品、状态暂停、模板8.29-1080-3)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"87636,87635,87634,82725,62392,58782,58165,46887,46886,46883,46881,46880,46879,46878,46877","combination_state":"3","creative_id":"7687602","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,3,"3974"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 3]},
+			{"eq": ["data.summary.impression_num", "3974"]}]
+      	},
+		{
+		"id":30,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：IOS-UK-mpa KZ 自动选品、状态暂停、模板8.29-1080-3、品类_女装sweaters)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"87636,87635,87634,82725,62392,58782,58165,46887,46886,46883,46881,46880,46879,46878,46877","combination_state":"3","creative_id":"7687602","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"805","product_id":"","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0, 1, "1533"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.summary.impression_num", "1533"]}]
+      	},
+        {
+		"id":31,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：IOS-UK-mpa KZ 自动选品、状态暂停、品类_女装sweaters、SKU_278260202)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"87636,87635,87634,82725,62392,58782,58165,46887,46886,46883,46881,46880,46879,46878,46877","combination_state":"3","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"805","product_id":"284005","start_select_time":"","end_select_time":"","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,2,"17710"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 2]},
+			{"eq": ["data.summary.impression_num", "17710"]}]
+      	},
+
+        {
+		"id":33,
+		"Document":"组合分析-轮播：获取列表数据(筛选条件：IOS-UK-mpa KZ 自动选品、品类_女装sweaters、选品时间_2018-10-12 00:00:00有问题)",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Combination/queryCombinationStatisticsList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","creative_type":"carousel","platform_id":"","campaign_id":"","compare_id":"","ad_set_id":"87636,87635,87634,82725,62392,58782,58165,46887,46886,46883,46881,46880,46879,46878,46877","combination_state":"","creative_id":"","size_id":"","merge":"false","start_date":"2018-10-15","end_date":"2018-10-21","category_id":"805","product_id":"","start_select_time":"2018-10-12 00:00:00","end_select_time":"2018-10-12 00:00:00","latest_serving_date":"","index_condition_id":"","page":"1","page_size":"10","index":"click_num,charge,app_custom_event.fb_mobile_purchase_value,impression_num,click_ratio,app_roas,install_unit_price,mobile_app_install,cpc,cpm,link_click,website_ctrlink_click","order_field":"","order_type":""},
+        "assertRq":[["code"],["data","total"],["data","summary","impression_num"]],
+		"assertExpect":[0,3,"20080"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total", 3]},
+			{"eq": ["data.summary.impression_num", "20080"]}]
+      	},
+
+		{
+		"id":34,
+		"Document":"产品分析-轮播：获取汇总数据（和单图一样的接口，无区别）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/basicInfo",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_num"]],
+		"assertExpect":[0,1832],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_num", 1832]}]
+      	},
+		{
+		"id":35,
+		"Document":"产品分析-轮播：获取列表数据",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,465],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 465]}]
+      	},
+        {
+		"id":36,
+		"Document":"产品分析-轮播：获取列表数据（筛选条件：女装sweaters）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"805","third_platform_id":"","is_new":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"]],
+		"assertExpect":[0,64],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 64]}]
+      	},
+        {
+		"id":37,
+		"Document":"产品分析-轮播：获取列表数据（筛选条件：SKU_286185301）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"286185301","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","creative_type":"carousel"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,63101],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+			{"eq": ["data.rows.0.impression_num", 63101]}]
+      	},
+        {
+		"id":38,
+		"Document":"产品分析-轮播：获取列表数据（筛选条件：计划_IOS-UK-mpa KZ 自动选品）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2815817","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"carousel"},
+        "Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,181,176603],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 181]},
+			{"eq": ["data.rows.0.impression_num", 176603]}]
+      	},
+        {
+		"id":39,
+		"Document":"产品分析-轮播：获取列表数据（筛选条件：上架时间2018-09-10到2018-09-11）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"","third_platform_id":"","is_new":"","create_date_start":"2018-09-10","create_date_end":"2018-09-11","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"carousel"},
+        "Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,11,217430],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 11]},
+			{"eq": ["data.rows.0.impression_num", 217430]}]
+      	},
+        {
+		"id":40,
+		"Document":"产品分析-轮播：获取列表数据（筛选条件：女装sweaters、SKU_286191401）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"","product_id":"","sku":"286191401","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"805","third_platform_id":"","is_new":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"carousel"},
+        "Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,1,107363],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 1]},
+			{"eq": ["data.rows.0.impression_num", 107363]}]
+      	},
+        {
+		"id":41,
+		"Document":"产品分析-轮播：获取列表数据（筛选条件：女装sweaters、计划_IOS-UK-mpa KZ 自动选品）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2815817","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"805","third_platform_id":"","is_new":"","create_date_start":"","create_date_end":"","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"carousel"},
+        "Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,29,43911],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 29]},
+			{"eq": ["data.rows.0.impression_num", 43911]}]
+      	},
+        {
+		"id":42,
+		"Document":"产品分析-轮播：获取列表数据（筛选条件：女装sweaters、计划_IOS-UK-mpa KZ 自动选品、上架时间2018-08-28到2018-08-30）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2815817","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"805","third_platform_id":"","is_new":"","create_date_start":"2018-08-28","create_date_end":"2018-08-30","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"carousel"},
+        "Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,2,43911],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 2]},
+			{"eq": ["data.rows.0.impression_num", 43911]}]
+      	},
+        {
+		"id":43,
+		"Document":"产品分析-轮播：获取列表数据（筛选条件：女装sweaters、计划_IOS-UK-mpa KZ 自动选品、上架时间2018-08-28到2018-08-30）",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Product/productList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"2815817","product_id":"","sku":"","start_date":"2018-10-15","end_date":"2018-10-21","third_category_id":"805","third_platform_id":"","is_new":"","create_date_start":"2018-08-28","create_date_end":"2018-08-30","page":"1","page_size":"10","order_field":"","order_type":"","trend_item":"click_ratio","creative_type":"carousel"},
+        "Request_Data":"",
+		"assertRq":[["code"],["data","total","rows_num"],["data","rows",0,"impression_num"]],
+		"assertExpect":[0,2,43911],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.total.rows_num", 2]},
+			{"eq": ["data.rows.0.impression_num", 43911]}]
+      	}
+    ]
+}

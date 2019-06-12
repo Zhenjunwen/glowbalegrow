@@ -1,0 +1,47 @@
+
+
+
+{
+	"filename":"loginready",
+	"RECORDS": [
+	  	{
+		"id":0,
+		"Document":"admin登录后台",
+		"Request_Method":"POST",
+		"Request_URL":"/cgi/login",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"user_identify": "oujin@kuaizi.co", "passwd": "Oujing@3.14", "valid": "", "login_type": "admin", "login_hash": "#partner/user/"},
+		"assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":1,
+		"Document":"admin进入环球易购",
+		"Request_Method":"GET",
+		"Request_URL":"/user/Login/autoLoginAdvertiser?user_id=1012&session_id=",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+		"assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":2,
+		"Document":"账号密码登录：",
+		"Request_Method":"POST",
+		"Request_URL":"/user/user/Login/Index",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"passwd":"egrow@123","user_identify":"hqtest3@kuaizi.co","valid":"","login_type":"advertiser","login_hash":"","is_valid":0},
+      	"assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+		}
+    ]
+}

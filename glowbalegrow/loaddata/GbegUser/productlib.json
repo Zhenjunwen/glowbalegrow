@@ -1,0 +1,269 @@
+
+
+
+{
+	"filename":"productlib",
+	"skip": true,
+	"RECORDS": [
+	  	{
+		"id":0,
+		"Document":"产品库-加载筛选框数据",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryCategoryList",
+		"Request_Headers":"",
+		"Request_Params":{"host":"","tag":"1"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","list",0,"category_id"],["data","list",0,"children",7,"category"]],
+		"assertExpect":[0,2,"activewear"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.list.0.category_id", 2]},
+			{"eq": ["data.list.0.children.7.category", "activewear"]}]
+      	},
+		{
+		"id":1,
+		"Document":"产品库-获取列表数据（全部状态）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"]],
+		"assertExpect":[0,501],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]}]
+      	},
+		{
+		"id":2,
+		"Document":"产品库-获取列表数据（全部状态、zaful）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","host":6,"t":"1546065025267"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"]],
+		"assertExpect":[0,501],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]}]
+      	},
+		{
+		"id":3,
+		"Document":"产品库-获取列表数据（全部状态、two-piece outfits）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","category": 800},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"]],
+		"assertExpect":[0,501],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]}]
+      	},
+		{
+		"id":4,
+		"Document":"产品库-获取列表数据（上架）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","status": 1},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"]],
+		"assertExpect":[0,501],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]}]
+      	},
+		{
+		"id":5,
+		"Document":"产品库-获取列表数据（下架）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","status": 0},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"]],
+		"assertExpect":[0,501],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]}]
+      	},
+		{
+		"id":6,
+		"Document":"产品库-获取列表数据（全部状态、sku404424901）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","keyword":404424901},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"],["data","total"],["data","list",0,"product_id"]],
+		"assertExpect":[0,501,1,360485],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.list.0.product_id", 360485]}]
+      	},
+		{
+		"id":7,
+		"Document":"产品库-获取列表数据（全部状态、产品名Tassel Pattern Square Shape Scarf）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","keyword":"Tassel Pattern Square Shape Scarf"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"],["data","total"],["data","list",3,"product_id"]],
+		"assertExpect":[0,501,4,360392],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]},
+			{"eq": ["data.total", 4]},
+			{"eq": ["data.list.3.product_id", 360392]}]
+      	},
+		{
+		"id":8,
+		"Document":"产品库-获取列表数据（全部状态、查询时间1101-1104）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","start_date":"2018-11-01","end_date":"2018-11-04"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"],["data","total"],["data","list",3,"product_id"]],
+		"assertExpect":[0,501,2808,325404],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]},
+			{"eq": ["data.total", 2808]},
+			{"eq": ["data.list.3.product_id", 325404]}]
+      	},
+		{
+		"id":9,
+		"Document":"产品库-获取列表数据（全部状态、two-piece outfits、查询时间1101-1104）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","start_date":"2018-11-01","end_date":"2018-11-04","category":"800"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"],["data","total"],["data","list",3,"product_id"]],
+		"assertExpect":[0,501,21,325004],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]},
+			{"eq": ["data.total", 21]},
+			{"eq": ["data.list.3.product_id", 325004]}]
+      	},
+		{
+		"id":10,
+		"Document":"产品库-获取列表数据（上架、查询时间1101-1104）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","start_date":"2018-11-01","end_date":"2018-11-04","status":1},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"]],
+		"assertExpect":[0,501],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]}]
+      	},
+		{
+		"id":11,
+		"Document":"产品库-获取列表数据（下架、查询时间1101-1104）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","start_date":"2018-11-01","end_date":"2018-11-04","status":0},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"]],
+		"assertExpect":[0,501],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]}]
+      	},
+		{
+		"id":12,
+		"Document":"产品库-获取列表数据（上架、sku343044203、查询时间1101-1104）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","start_date":"2018-11-01","end_date":"2018-11-04","keyword":343044203,"status":1},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"],["data","total"],["data","list"]],
+		"assertExpect":[0,501,0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]},
+			{"eq": ["data.total", 0]},
+			{"eq": ["data.list", []]}]
+      	},
+		{
+		"id":13,
+		"Document":"产品库-获取列表数据（下架、sku343044203、查询时间1101-1104）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","start_date":"2018-11-01","end_date":"2018-11-04","keyword":343044203,"status":0},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"],["data","total"],["data","list",0,"product_id"]],
+		"assertExpect":[0,501,1,325270],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]},
+			{"eq": ["data.total", 1]},
+			{"eq": ["data.list.0.product_id", 325270]}]
+      	},
+		{
+		"id":14,
+		"Document":"产品库-获取列表数据（全部状态、sku404424901、查询时间1101-1104）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","tag":"1","t":"1546065025267","start_date":"2018-11-01","end_date":"2018-11-04","keyword":404424901},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"],["data","total"],["data","list"]],
+		"assertExpect":[0,501,0,[]],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]},
+			{"eq": ["data.total", 0]},
+			{"eq": ["data.list", []]}]
+      	},
+		{
+		"id":15,
+		"Document":"产品库-获取列表数据（全部状态、查询时间1101-1104、分页pagesize40）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"40","tag":"1","t":"1546065025267","start_date":"2018-11-01","end_date":"2018-11-04"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"],["data","total"],["data","list",3,"product_id"],["data","page_size"]],
+		"assertExpect":[0,501,2808,325404,"40"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]},
+			{"eq": ["data.total", 2808]},
+			{"eq": ["data.list.3.product_id", 325404]},
+			{"eq": ["data.page_size", "40"]}]
+      	},
+		{
+		"id":16,
+		"Document":"产品库-获取列表数据（全部状态、查询时间1101-1104、分页pagesize40、第2页）",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"2","prepage":"40","tag":"1","t":"1546065025267","start_date":"2018-11-01","end_date":"2018-11-04"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","product_host_list",0,"__ID__"],["data","total"],["data","list",3,"product_id"],["data","page_size"],["data","page"]],
+		"assertExpect":[0,501,2808,325253,"40",2],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.product_host_list.0.__ID__", 501]},
+			{"eq": ["data.total", 2808]},
+			{"eq": ["data.list.3.product_id", 325253]},
+			{"eq": ["data.page_size", "40"]},
+			{"eq": ["data.page", 2]}]
+      	}
+    ]
+}

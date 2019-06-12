@@ -1,0 +1,260 @@
+
+
+
+{
+	"filename":"creative_selection_pool",
+	"skip": true,
+	"停用":{
+		"id":2,
+		"Document":"账号密码登录页面：",
+		"Request_Method":"GET",
+		"Request_URL":"/login",
+		"Request_Headers":"",
+		"Request_Params":{"redirect":"/home"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+	"RECORDS": [
+		{
+		"id":0,
+		"Document":"选品池待审核：CodeList",
+		"Request_Method":"GET",
+		"Request_URL":"/user/AdvertiserRoleCode/queryCodeList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"],["data","c_0000"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.c_0000", 0]}]
+      	},
+		{
+		"id":1,
+		"Document":"选品池待审核：获取列表表头指标",
+		"Request_Method":"POST",
+		"Request_URL":"/aiserving/SelectProduct/queryCustomData",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"key":"_INDICATOR_SETTING_CREATIVE_SELECTION_POOL"},
+        "assertRq":[["code"],["data"]],
+		"assertExpect":[0,"[\"sku\",\"batch\",\"third_category\",\"cpi_30\",\"roas_30\",\"cpi_7\",\"roas_7\",\"app_custom_event.fb_mobile_purchase\",\"cpi_7_r\",\"roas_7_r\",\"app_custom_event.fb_mobile_purchase_r\"]"],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data", "[\"sku\",\"batch\",\"third_category\",\"cpi_30\",\"roas_30\",\"cpi_7\",\"roas_7\",\"app_custom_event.fb_mobile_purchase\",\"cpi_7_r\",\"roas_7_r\",\"app_custom_event.fb_mobile_purchase_r\"]"]}]
+      	},
+      	{
+		"id":2,
+		"Document":"选品池待审核：获取列表",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","check_status":"0","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":3,
+		"Document":"选品池待审核：是否有合成中",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queueList",
+		"Request_Headers":"",
+		"Request_Params":{"subaccount_id": 21257},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":4,
+		"Document":"选品池待审核：加载筛选框内容",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/getParams",
+		"Request_Headers":"",
+		"Request_Params":{"type":"audit","check_status":"0","subaccount_id":"null"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":5,
+		"Document":"选品池待审核：查询主账号",
+		"Request_Method":"GET",
+		"Request_URL":"/user/SubAccount/queryAuthAccount",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":6,
+		"Document":"选品池待审核：切换账号列表",
+		"Request_Method":"GET",
+		"Request_URL":"/user/SubAccountGroup/getAccessSubAccount",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"],["data",2,"subaccount_id"]],
+		"assertExpect":[0, 21257],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.2.subaccount_id", 21257]}]
+      	},
+		{
+		"id":7,
+		"Document":"选品池待审核：概况数",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/brief",
+		"Request_Headers":"",
+		"Request_Params":{"type":"audit","page":"1","page_size":"20","check_status":"1","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":8,
+		"Document":"选品池审核通过：列表",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","status":"1","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":9,
+		"Document":"选品池审核通过：概况数",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/brief",
+		"Request_Headers":"",
+		"Request_Params":{"type":"delivery","page":"1","page_size":"20","status":"1","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"],["data","campaign_total"]],
+		"assertExpect":[0,2],
+		"validate": [
+			{"eq": ["code", 0]},
+			{"eq": ["data.campaign_total", 2]}]
+      	},
+		{
+		"id":10,
+		"Document":"选品池审核通过：加载筛选框内容",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/getParams",
+		"Request_Headers":"",
+		"Request_Params":{"type":"delivery","status":"1","subaccount_id":"null"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":11,
+		"Document":"选品池投放历史：列表",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":12,
+		"Document":"选品池投放历史：加载筛选框内容",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/getParams",
+		"Request_Headers":"",
+		"Request_Params":{"subaccount_id":"null"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":13,
+		"Document":"选品池自定义新增：计算新增单元数",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/getAdSetAutoCount",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[-1],
+		"validate": [
+			{"eq": ["code", -1]}]
+      	},
+		{
+		"id":14,
+		"Document":"选品池自定义新增：加载单元筛选框",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/getCampaignAdsets",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"选品池自定义新增：购物车分类",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/category/getCategory",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":16,
+		"Document":"选品池自定义新增：购物车列表",
+		"Request_Method":"GET",
+		"Request_URL":"/tool/ProductRepository/queryProduct",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","prepage":"20","status":"1","category":""},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":17,
+		"Document":"选品池：审核配置",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/getAutoAuditTime",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	}
+    ]
+}

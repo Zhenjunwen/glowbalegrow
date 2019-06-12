@@ -1,0 +1,414 @@
+
+
+
+{
+	"filename":"dccenter",
+	"skip": true,
+	"RECORDS": [
+	  	{
+		"id":1,
+		"Document":"每日概况：获取计划单元",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Pub/getProjectAndCampaign",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":2,
+		"Document":"每日概况-整体趋势图：配置选项",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Index/queryIndex",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","type":"13"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":3,
+		"Document":"每日概况：基础配置选项",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.Index/queryTrendIndex",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":4,
+		"Document":"每日概况：获取投放渠道",
+		"Request_Method":"GET",
+		"Request_URL":"/advertise/Platform/queryProjectPlatformList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":5,
+		"Document":"每日概况：获取查询时间",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.Project/getProjectTypeAndDate",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":6,
+		"Document":"每日概况：获取广告主账号信息",
+		"Request_Method":"GET",
+		"Request_URL":"/user/AdvertiserInfo/Index",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":7,
+		"Document":"每日概况：获取全局自定义指标",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Index/queryIndex",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","type":"12"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":8,
+		"Document":"每日概况-整体概况：指标配置",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Index/queryIndex",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","type":"6"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":9,
+		"Document":"每日概况-整体概况：指标和数据",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/BasicDate/basicInfo",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":10,
+		"Document":"每日概况-趋势图：指标配置",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Project/queryChartConfigList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","type":"6"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":11,
+		"Document":"每日概况-趋势图：获取单元计划列表-全部",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.campaign/queryCampaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","creative_type":"all","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":12,
+		"Document":"每日概况-趋势图：获取单元计划列表-单图",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.campaign/queryCampaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","creative_type":"banner","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":13,
+		"Document":"每日概况-趋势图：获取单元计划列表-轮播",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.campaign/queryCampaignList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","creative_type":"carousel","start_date":"2018-10-15","end_date":"2018-10-21"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":14,
+		"Document":"每日概况-趋势图：图标数据-全部",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/BasicDateTrend/overallTrend",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","creative_type":"all","date_start":"2018-10-02","date_end":"2018-10-10","chart_config_id":"15"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"每日概况-趋势图：图标数据-单图",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/BasicDateTrend/overallTrend",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","creative_type":"banner","date_start":"2018-10-02","date_end":"2018-10-10","chart_config_id":"15"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":16,
+		"Document":"每日概况-趋势图：图标数据-轮播",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/BasicDateTrend/overallTrend",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","creative_type":"carousel","date_start":"2018-10-02","date_end":"2018-10-10","chart_config_id":"15"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":17,
+		"Document":"每日概况-渠道概况：获取指标",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Index/queryIndex",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","type":"9"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":18,
+		"Document":"每日概况-渠道概况：获取数据-全部",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Project/queryPlatformSummary",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"all"},
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":19,
+		"Document":"每日概况-渠道概况：获取数据-单图",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Project/queryPlatformSummary",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"banner"},
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":20,
+		"Document":"每日概况-渠道概况：获取数据-轮播",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Project/queryPlatformSummary",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"carousel"},
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":21,
+		"Document":"月度概况-整体概况：获取指标",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Index/queryIndex",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","type":"10"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":22,
+		"Document":"月度概况-整体概况：获取数据",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/BasicMonth/basicInfo",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","campaign_id":"undefined","date_start":"2018-10-15","date_end":"2018-10-21"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":23,
+		"Document":"月度概况-国家定向：获取指标",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Index/queryIndex",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","type":"11"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":24,
+		"Document":"月度概况-国家定向：获取数据",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/BasicMonthCampaignCountry/campaignCountry",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","date_start":"2018-10-15","date_end":"2018-10-21","page":"1","pagesize":"10","orderby":""},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":25,
+		"Document":"月度概况-top/bottom10：获取指标",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Project/queryChartConfigList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":26,
+		"Document":"月度概况-top/bottom10：获取数据-计划",
+		"Request_Method":"POST",
+		"Request_URL":"/report/v2.Project/queryCampaignKpiList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":{"project_id":"2750159","chart_config_id":"7","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"","sort_index_id":"9","order_field":"","index":"impression_num,click_num,click_ratio,charge,cpc,cpm,app_custom_event.fb_mobile_purchase_value,install_unit_price"},
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":27,
+		"Document":"月度概况-top/bottom10：获取数据-单元",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Project/queryAdSetRankingList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","chart_config_id":"13","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"","sort_index_id":"3","order_field":"click_ratio","index":"impression_num,click_num,click_ratio,charge,cpc,cpm,app_custom_event.fb_mobile_purchase_value,install_unit_price"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":28,
+		"Document":"月度概况-top/bottom10：获取数据-组合",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.Combination/combinationCompare",
+		"Request_Headers":"",
+		"Request_Params":{"top_num":"10","bottom_num":"10","project_id":"2750159","chart_config_id":"13","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"","sort_index_id":"3","order_field":"click_ratio","index":"impression_num,click_num,click_ratio,charge,cpc,cpm,app_custom_event.fb_mobile_purchase_value,install_unit_price"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":29,
+		"Document":"月度概况-top/bottom10：获取数据-产品",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Project/queryProductRankingList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","chart_config_id":"13","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"","sort_index_id":"3","order_field":"click_ratio","index":"impression_num,click_num,click_ratio,charge,cpc,cpm,app_custom_event.fb_mobile_purchase_value,install_unit_price"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":30,
+		"Document":"月度概况-top/bottom10：获取数据-模板",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2/Project/queryTemplateRankingList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id":"2750159","chart_config_id":"13","start_date":"2018-10-15","end_date":"2018-10-21","creative_type":"","sort_index_id":"3","order_field":"click_ratio","index":"impression_num,click_num,click_ratio,charge,cpc,cpm,app_custom_event.fb_mobile_purchase_value,install_unit_price"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":31,
+		"Document":"导数功能：查询任务列表",
+		"Request_Method":"GET",
+		"Request_URL":"/report/v2.FileTask/queryTaskList",
+		"Request_Headers":"",
+		"Request_Params":{"project_id": "2750159"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	}
+
+
+    ]
+}

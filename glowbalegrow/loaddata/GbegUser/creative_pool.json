@@ -1,0 +1,271 @@
+
+
+
+{
+	"filename":"creative_pool",
+	"skip": false,
+	"RECORDS": [
+	  	{
+		"id":1,
+		"Document":"创意池：获取待审核有无数据,小红点",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryPendingList",
+		"Request_Headers":"",
+		"Request_Params":{"subaccount_id":"","check_status":"0"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":2,
+		"Document":"创意池-待审核-单图：是否有合成中",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queueList",
+		"Request_Headers":"",
+		"Request_Params":{"subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":3,
+		"Document":"创意池-待审核-单图：加载筛选框内容",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/getParams",
+		"Request_Headers":"",
+		"Request_Params":{"subaccount_id":"null","type":"audit","check_status":"0","creative_type":"single"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":4,
+		"Document":"创意池-待审核-单图：概况",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/brief",
+		"Request_Headers":"",
+		"Request_Params":{"type":"audit","page":"1","page_size":"20","creative_type":"single","check_status":"0","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":5,
+		"Document":"创意池-待审核-单图：列表",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","creative_type":"single","check_status":"0","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":6,
+		"Document":"创意池-自定义新增：计算新增单元数",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/getAdSetAutoCount",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[-1],
+		"validate": [
+			{"eq": ["code", -1]}]
+      	},
+		{
+		"id":7,
+		"Document":"创意池-待审核-轮播：加载筛选框内容",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/getParams",
+		"Request_Headers":"",
+		"Request_Params":{"subaccount_id":"null","type":"audit","check_status":"0","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":8,
+		"Document":"创意池-待审核-轮播：概况",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/brief",
+		"Request_Headers":"",
+		"Request_Params":{"type":"audit","page":"1","page_size":"20","creative_type":"carousel","check_status":"0","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":9,
+		"Document":"创意池-待审核-轮播：列表",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","creative_type":"carousel","check_status":"0","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":10,
+		"Document":"创意池-审核通过-单图：加载筛选框内容",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/getParams",
+		"Request_Headers":"",
+		"Request_Params":{"subaccount_id":"null","type":"delivery","status":"1","creative_type":"single"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":11,
+		"Document":"创意池-审核通过-单图：概况",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/brief",
+		"Request_Headers":"",
+		"Request_Params":{"type":"delivery","page":"1","page_size":"20","creative_type":"single","status":"1","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":12,
+		"Document":"创意池-审核通过-单图：列表",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","creative_type":"single","status":"1","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":13,
+		"Document":"创意池-审核通过-轮播：加载筛选框内容",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/getParams",
+		"Request_Headers":"",
+		"Request_Params":{"subaccount_id":"null","type":"delivery","status":"1","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":14,
+		"Document":"创意池-审核通过-轮播：概况",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/brief",
+		"Request_Headers":"",
+		"Request_Params":{"type":"delivery","page":"1","page_size":"20","creative_type":"carousel","status":"1","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":15,
+		"Document":"创意池-审核通过-轮播：列表",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","creative_type":"carousel","status":"1","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":16,
+		"Document":"创意池-历史-单图：加载筛选框内容",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/getParams",
+		"Request_Headers":"",
+		"Request_Params":{"subaccount_id":"null","creative_type":"single"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":17,
+		"Document":"创意池-历史-单图：列表",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","creative_type":"single","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":18,
+		"Document":"创意池-历史-轮播：加载筛选框内容",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/getParams",
+		"Request_Headers":"",
+		"Request_Params":{"subaccount_id":"null","creative_type":"carousel"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":19,
+		"Document":"创意池-历史-轮播：列表",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"page":"1","page_size":"20","creative_type":"carousel","subaccount_id":"21257"},
+		"Request_Data":"",
+        "assertRq":[["code"]],
+		"assertExpect":[0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	},
+		{
+		"id":20,
+		"Document":"通用：推送失败提示",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/Creative/queryFailPushList",
+		"Request_Headers":"",
+		"Request_Params":"",
+		"Request_Data":"",
+        "assertRq":[["code"],["data","count"]],
+		"assertExpect":[0,0],
+		"validate": [
+			{"eq": ["code", 0]}]
+      	}
+
+
+    ]
+}

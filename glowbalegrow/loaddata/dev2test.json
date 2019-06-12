@@ -1,0 +1,21 @@
+
+
+
+{
+	"filename":"dev2test",
+	"RECORDS": [
+	  	{
+		"id":0,
+		"Document":"选品池-审核通过-检查图片地址",
+		"Request_Method":"GET",
+		"Request_URL":"/aiserving/SelectProduct/queryList",
+		"Request_Headers":"",
+		"Request_Params":{"host":"","tag":"1"},
+		"Request_Data":"",
+		"assertRq":[["code"],["data","list",0,"category_id"],["data","list",0,"children",7,"category"]],
+		"assertExpect":[0,2,"activewear"]
+      	}
+
+
+    ]
+}

@@ -1,0 +1,4562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>环球易购接口监控报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { white-space: pre-wrap; word-wrap: break-word;}
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: block;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>环球易购接口监控报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2019-02-22 16:00:25</p>
+<p class='attribute'><strong>Duration:</strong> 0:02:11.603747</p>
+<p class='attribute'><strong>Status:</strong> Pass 166</p>
+
+<p class='description'>用例执行情况：</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='passClass'>
+    <td>MyTestCase</td>
+    <td>166</td>
+    <td>166</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',166)">Detail</a></td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_001</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.1: 【GET】投放标签-查询数据（条件：计划名IOS【CA _MPA】KZ 指定SKU）
+200 0.037063
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_002</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.2: 【POST】投放标签-打标签1-1(1计划+1单元)
+200 0.016958
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_003</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.3: 【POST】投放标签-打标签1-2(1计划+2单元)
+200 0.017949
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_004</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.4: 【POST】投放标签-打标签2-1(1个计划)
+200 0.017972
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_005</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.5: 【POST】投放标签-打标签2-2(1个单元)
+200 0.018953
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_006</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.6: 【POST】投放标签-打标签1-1-1(两个计划)
+200 0.018946
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_007</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        pass</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.7: 【POST】组合标签-打标签1-1(2个创意同一单元)
+200 0.016056
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_008</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        pass</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.8: 【POST】组合标签-打标签1-2(3个创意x2个单元)
+200 0.015105
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_009</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        pass</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.9: 【POST】组合标签-打标签2-1(1个创意)
+200 0.016991
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_010</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+        pass</a>
+
+    <div id='div_pt1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.10: 【POST】组合标签-打标签2-2
+200 0.019057
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_011</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11')" >
+        pass</a>
+
+    <div id='div_pt1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.11: 【POST】元素标签-打标签-40%off
+200 0.019142
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_012</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12')" >
+        pass</a>
+
+    <div id='div_pt1.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.12: 【POST】元素标签-打标签-70%off
+200 0.017145
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_013</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.13')" >
+        pass</a>
+
+    <div id='div_pt1.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.13: 【POST】元素标签-打标签-红hotsale
+200 0.018626
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_014</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.14')" >
+        pass</a>
+
+    <div id='div_pt1.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.14: 【POST】产品标签-打标签-商品标签1-1
+200 0.018951
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_015</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.15')" >
+        pass</a>
+
+    <div id='div_pt1.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.15: 【POST】产品标签-打标签-商品标签1-2
+200 0.018961
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_016</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.16')" >
+        pass</a>
+
+    <div id='div_pt1.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.16: 【POST】计划分析-单图：获取列表数据(筛选条件：投放标签1-1)
+200 0.162777
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_017</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.17')" >
+        pass</a>
+
+    <div id='div_pt1.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.17: 【POST】计划分析-单图：获取列表数据(筛选条件：投放标签1-2)
+200 0.154488
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_018</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.18')" >
+        pass</a>
+
+    <div id='div_pt1.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.18: 【POST】计划分析-单图：获取列表数据(筛选条件：投放标签2-1)
+200 0.151071
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.19' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_019</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.19')" >
+        pass</a>
+
+    <div id='div_pt1.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.19: 【POST】计划分析-单图：获取列表数据(筛选条件：投放标签2-2)
+200 0.031888
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.20' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_020</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.20')" >
+        pass</a>
+
+    <div id='div_pt1.20' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.20').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.20: 【POST】计划分析-单图：获取列表数据(筛选条件：投放标签1-1、投放标签1-2)
+200 0.189899
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.21' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_021</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.21')" >
+        pass</a>
+
+    <div id='div_pt1.21' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.21').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.21: 【POST】计划分析-单图：获取列表数据(筛选条件：投放标签1-1、投放标签2-1)
+200 0.050803
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.22' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_022</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.22')" >
+        pass</a>
+
+    <div id='div_pt1.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.22: 【POST】计划分析-单图：获取列表数据(筛选条件：投放标签1-1、计划IOS 【UK_PL】KZ 指定SKU)(有问题)
+200 0.028252
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.23' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_023</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.23')" >
+        pass</a>
+
+    <div id='div_pt1.23' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.23').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.23: 【POST】计划分析-单图：获取列表数据(筛选条件：投放标签1-1-1、开启状态)
+200 0.144973
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.24' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_024</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.24')" >
+        pass</a>
+
+    <div id='div_pt1.24' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.24').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.24: 【POST】计划分析-单图：获取列表数据(筛选条件：投放标签1-2、1-1-1、搜索计划IOS-UK-PL KZ 自动选品)
+200 0.046923
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.25' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_025</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.25')" >
+        pass</a>
+
+    <div id='div_pt1.25' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.25').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.25: 【POST】单元分析-单图：获取列表数据(筛选条件：投放标签1-1)
+200 0.155657
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.26' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_026</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.26')" >
+        pass</a>
+
+    <div id='div_pt1.26' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.26').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.26: 【POST】单元分析-单图：获取列表数据(筛选条件：投放标签1-2)
+200 0.162157
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.27' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_027</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.27')" >
+        pass</a>
+
+    <div id='div_pt1.27' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.27').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.27: 【POST】单元分析-单图：获取列表数据(筛选条件：投放标签2-1)
+200 0.025228
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.28' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_028</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.28')" >
+        pass</a>
+
+    <div id='div_pt1.28' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.28').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.28: 【POST】单元分析-单图：获取列表数据(筛选条件：投放标签2-2)
+200 0.162985
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.29' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_029</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.29')" >
+        pass</a>
+
+    <div id='div_pt1.29' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.29').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.29: 【POST】单元分析-单图：获取列表数据(筛选条件：投放标签1-1、投放标签1-2)
+200 0.191353
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.30' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_030</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.30')" >
+        pass</a>
+
+    <div id='div_pt1.30' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.30').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.30: 【POST】单元分析-单图：获取列表数据(筛选条件：投放标签1-2、投放标签2-2)
+200 0.054039
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.31' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_031</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.31')" >
+        pass</a>
+
+    <div id='div_pt1.31' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.31').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.31: 【POST】单元分析-单图：获取列表数据(筛选条件：投放标签1-2、开启状态)
+200 0.153676
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.32' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_032</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.32')" >
+        pass</a>
+
+    <div id='div_pt1.32' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.32').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.32: 【POST】单元分析-单图：获取列表数据(筛选条件：投放标签1-2、1-2、计划IOS 【US_PL】KZ 指定SKU)
+200 0.176866
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.33' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_033</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.33')" >
+        pass</a>
+
+    <div id='div_pt1.33' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.33').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.33: 【POST】单元分析-单图：获取列表数据(筛选条件：投放标签CA、自动选品、F、JandC)
+200 0.179328
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.34' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_034</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.34')" >
+        pass</a>
+
+    <div id='div_pt1.34' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.34').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.34: 【POST】组合分析-单图：获取列表数据(条件：投放标签1-1)
+200 2.674488
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.35' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_035</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.35')" >
+        pass</a>
+
+    <div id='div_pt1.35' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.35').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.35: 【POST】组合分析-单图：获取列表数据(条件：投放标签1-2)
+200 2.026939
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.36' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_036</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.36')" >
+        pass</a>
+
+    <div id='div_pt1.36' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.36').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.36: 【POST】组合分析-单图：获取列表数据(条件：投放标签2-1)
+200 1.938379
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.37' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_037</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.37')" >
+        pass</a>
+
+    <div id='div_pt1.37' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.37').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.37: 【POST】组合分析-单图：获取列表数据(条件：投放标签2-2)
+200 2.736651
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.38' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_038</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.38')" >
+        pass</a>
+
+    <div id='div_pt1.38' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.38').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.38: 【POST】组合分析-单图：获取列表数据(条件：投放标签1-1-1)
+200 2.164476
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.39' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_039</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.39')" >
+        pass</a>
+
+    <div id='div_pt1.39' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.39').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.39: 【POST】组合分析-单图：获取列表数据(条件：投放标签1-1、投放标签1-2)
+200 2.020078
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.40' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_040</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.40')" >
+        pass</a>
+
+    <div id='div_pt1.40' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.40').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.40: 【POST】组合分析-单图：获取列表数据(条件：投放标签2-1、投放标签2-2)
+200 5.231798
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.41' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_041</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.41')" >
+        pass</a>
+
+    <div id='div_pt1.41' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.41').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.41: 【POST】组合分析-单图：获取列表数据(条件：投放标签1-1、投放标签2-1)
+200 0.046875
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.42' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_042</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.42')" >
+        pass</a>
+
+    <div id='div_pt1.42' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.42').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.42: 【POST】组合分析-单图：获取列表数据(条件：组合标签1-1)
+200 1.789728
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.43' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_043</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.43')" >
+        pass</a>
+
+    <div id='div_pt1.43' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.43').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.43: 【POST】组合分析-单图：获取列表数据(条件：组合标签1-2)
+200 1.664421
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.44' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_044</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.44')" >
+        pass</a>
+
+    <div id='div_pt1.44' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.44').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.44: 【POST】组合分析-单图：获取列表数据(条件：组合标签2-1)
+200 1.626285
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.45' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_045</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.45')" >
+        pass</a>
+
+    <div id='div_pt1.45' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.45').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.45: 【POST】组合分析-单图：获取列表数据(条件：组合标签2-2)
+200 3.268164
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.46' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_046</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.46')" >
+        pass</a>
+
+    <div id='div_pt1.46' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.46').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.46: 【POST】组合分析-单图：获取列表数据(条件：投放标签2-2，计划IOS 【FR_PL】KZ 指定SKU)
+200 0.030918
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.47' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_047</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.47')" >
+        pass</a>
+
+    <div id='div_pt1.47' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.47').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.47: 【POST】组合分析-单图：获取列表数据(条件：投放标签2-2、组合标签2-2)
+200 0.944475
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.48' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_048</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.48')" >
+        pass</a>
+
+    <div id='div_pt1.48' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.48').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.48: 【POST】组合分析-单图：获取列表数据(条件：投放CA、自动选品、F、JandC)
+200 1.97971
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.49' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_049</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.49')" >
+        pass</a>
+
+    <div id='div_pt1.49' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.49').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.49: 【GET】模板分析-单图：获取列表数据(条件：投放标签1-1)
+200 0.342085
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.50' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_050</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.50')" >
+        pass</a>
+
+    <div id='div_pt1.50' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.50').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.50: 【GET】模板分析-单图：获取列表数据(条件：投放标签1-2)
+200 0.349066
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.51' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_051</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.51')" >
+        pass</a>
+
+    <div id='div_pt1.51' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.51').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.51: 【GET】模板分析-单图：获取列表数据(条件：投放标签2-1)
+200 0.2623
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.52' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_052</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.52')" >
+        pass</a>
+
+    <div id='div_pt1.52' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.52').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.52: 【GET】模板分析-单图：获取列表数据(条件：投放标签2-2)
+200 0.314159
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.53' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_053</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.53')" >
+        pass</a>
+
+    <div id='div_pt1.53' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.53').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.53: 【GET】模板分析-单图：获取列表数据(条件：投放标签1-1、投放标签1-2)
+200 0.357047
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.54' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_054</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.54')" >
+        pass</a>
+
+    <div id='div_pt1.54' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.54').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.54: 【GET】模板分析-单图：获取列表数据(条件：投放标签2-1、投放标签2-2)
+200 0.36303
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.55' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_055</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.55')" >
+        pass</a>
+
+    <div id='div_pt1.55' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.55').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.55: 【GET】模板分析-单图：获取列表数据(条件：投放标签1-1、投放标签2-1)
+200 0.045872
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.56' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_056</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.56')" >
+        pass</a>
+
+    <div id='div_pt1.56' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.56').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.56: 【GET】模板分析-单图：获取列表数据(条件：模板标签-中间文四周图)
+200 0.304188
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.57' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_057</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.57')" >
+        pass</a>
+
+    <div id='div_pt1.57' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.57').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.57: 【GET】模板分析-单图：获取列表数据(条件：投放标签2-1、模板标签-中间文四周图)
+200 0.230382
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.58' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_058</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.58')" >
+        pass</a>
+
+    <div id='div_pt1.58' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.58').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.58: 【GET】模板分析-单图：获取列表数据(条件：投放标签2-1、计划IOS 【FR_PL】KZ 指定SKU)
+200 0.036901
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.59' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_059</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.59')" >
+        pass</a>
+
+    <div id='div_pt1.59' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.59').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.59: 【GET】模板分析-单图：获取列表数据(条件：投放标签2-1、状态激活)
+200 0.255318
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.60' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_060</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.60')" >
+        pass</a>
+
+    <div id='div_pt1.60' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.60').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.60: 【GET】模板分析-单图：获取列表数据(条件：投放标签2-2、计划IOS-UK-PL KZ 自动选品)
+200 0.145609
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.61' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_061</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.61')" >
+        pass</a>
+
+    <div id='div_pt1.61' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.61').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.61: 【GET】模板分析-单图：获取列表数据(条件：投放标签CA、自动选品、F、JandC)
+200 0.341091
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.62' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_062</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.62')" >
+        pass</a>
+
+    <div id='div_pt1.62' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.62').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.62: 【POST】元素分析-单图：获取列表数据(条件：投放标签1-1)
+200 0.331115
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.63' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_063</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.63')" >
+        pass</a>
+
+    <div id='div_pt1.63' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.63').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.63: 【POST】元素分析-单图：获取列表数据(条件：投放标签1-2)
+200 0.359977
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.64' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_064</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.64')" >
+        pass</a>
+
+    <div id='div_pt1.64' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.64').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.64: 【POST】元素分析-单图：获取列表数据(条件：投放标签2-1)
+200 0.827352
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.65' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_065</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.65')" >
+        pass</a>
+
+    <div id='div_pt1.65' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.65').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.65: 【POST】元素分析-单图：获取列表数据(条件：投放标签2-2)
+200 0.2954
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.66' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_066</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.66')" >
+        pass</a>
+
+    <div id='div_pt1.66' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.66').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.66: 【POST】元素分析-单图：获取列表数据(条件：投放标签1-1、投放标签1-2)
+200 0.387052
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.67' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_067</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.67')" >
+        pass</a>
+
+    <div id='div_pt1.67' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.67').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.67: 【POST】元素分析-单图：获取列表数据(条件：投放标签2-1、投放标签2-2)
+200 0.326863
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.68' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_068</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.68')" >
+        pass</a>
+
+    <div id='div_pt1.68' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.68').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.68: 【POST】元素分析-单图：获取列表数据(条件：投放标签1-1、投放标签2-1)
+200 0.042669
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.69' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_069</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.69')" >
+        pass</a>
+
+    <div id='div_pt1.69' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.69').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.69: 【POST】元素分析-单图：获取列表数据(条件：元素标签-40%off)
+200 1.019627
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.70' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_070</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.70')" >
+        pass</a>
+
+    <div id='div_pt1.70' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.70').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.70: 【POST】元素分析-单图：获取列表数据(条件：投放标签1-1、元素标签-40%off)
+200 0.281248
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.71' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_071</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.71')" >
+        pass</a>
+
+    <div id='div_pt1.71' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.71').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.71: 【POST】元素分析-单图：获取列表数据(条件：投放标签1-1、计划IOS 【UK_PL】KZ 指定SKU)(有问题)
+200 0.021941
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.72' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_072</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.72')" >
+        pass</a>
+
+    <div id='div_pt1.72' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.72').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.72: 【POST】元素分析-单图：获取列表数据(条件：投放标签1-1、模板8.24-1200-2)
+200 0.569478
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.73' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_073</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.73')" >
+        pass</a>
+
+    <div id='div_pt1.73' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.73').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.73: 【POST】元素分析-单图：获取列表数据(条件：投放标签CA、自动选品、F、JandC)
+200 0.346075
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.74' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_074</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.74')" >
+        pass</a>
+
+    <div id='div_pt1.74' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.74').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.74: 【GET】产品分析-单图：获取列表数据(条件：投放标签1-2)
+200 0.31117
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.75' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_075</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.75')" >
+        pass</a>
+
+    <div id='div_pt1.75' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.75').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.75: 【GET】产品分析-单图：获取列表数据(条件：投放标签2-1)
+200 0.238363
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.76' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_076</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.76')" >
+        pass</a>
+
+    <div id='div_pt1.76' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.76').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.76: 【GET】产品分析-单图：获取列表数据(条件：投放标签2-2)
+200 0.264292
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.77' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_077</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.77')" >
+        pass</a>
+
+    <div id='div_pt1.77' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.77').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.77: 【GET】产品分析-单图：获取列表数据(条件：投放标签2-1、投放标签2-2)
+200 0.289226
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.78' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_078</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.78')" >
+        pass</a>
+
+    <div id='div_pt1.78' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.78').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.78: 【GET】产品分析-单图：获取列表数据(条件：投放标签1-1、投放标签2-1)
+200 0.037899
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.79' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_079</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.79')" >
+        pass</a>
+
+    <div id='div_pt1.79' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.79').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.79: 【GET】产品分析-单图：获取列表数据(条件：投放标签1-1-1)(有问题)
+200 0.290224
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.80' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_080</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.80')" >
+        pass</a>
+
+    <div id='div_pt1.80' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.80').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.80: 【GET】产品分析-单图：获取列表数据(条件：商品标签1-1)
+200 0.238363
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.81' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_081</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.81')" >
+        pass</a>
+
+    <div id='div_pt1.81' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.81').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.81: 【GET】产品分析-单图：获取列表数据(条件：投放标签2-2,商品标签1-1)
+200 0.225397
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.82' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_082</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.82')" >
+        pass</a>
+
+    <div id='div_pt1.82' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.82').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.82: 【GET】产品分析-单图：获取列表数据(条件：投放标签2-2,品类two-piece outfits)
+200 0.170543
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.83' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_083</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.83')" >
+        pass</a>
+
+    <div id='div_pt1.83' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.83').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.83: 【GET】产品分析-单图：获取列表数据(条件：投放标签2-2,sku-286024701)
+200 0.275267
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.84' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_084</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.84')" >
+        pass</a>
+
+    <div id='div_pt1.84' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.84').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.84: 【GET】产品分析-单图：获取列表数据(条件：投放标签2-2,计划IOS 【FR_PL】KZ 指定SKU)
+200 3.361789
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.85' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_085</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.85')" >
+        pass</a>
+
+    <div id='div_pt1.85' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.85').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.85: 【GET】产品分析-单图：获取列表数据(条件：投放标签2-2,新品)
+200 0.179461
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.86' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_086</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.86')" >
+        pass</a>
+
+    <div id='div_pt1.86' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.86').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.86: 【GET】产品分析-单图：获取列表数据(条件：投放标签2-2,上架时间0915-0928)
+200 0.274236
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.87' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_087</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.87')" >
+        pass</a>
+
+    <div id='div_pt1.87' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.87').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.87: 【GET】产品分析-单图：获取列表数据(条件：商品标签1-1、品类men-tops)
+200 0.232868
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.88' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_088</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.88')" >
+        pass</a>
+
+    <div id='div_pt1.88' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.88').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.88: 【GET】产品分析-单图：获取列表数据(条件：商品标签1-1、sku277283301)
+200 0.23352
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.89' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_089</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.89')" >
+        pass</a>
+
+    <div id='div_pt1.89' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.89').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.89: 【GET】产品分析-单图：获取列表数据(条件：商品标签1-1、计划：IOS 【UK_PL】KZ 指定SKU)
+200 0.20706
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.90' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_090</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.90')" >
+        pass</a>
+
+    <div id='div_pt1.90' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.90').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.90: 【GET】产品分析-单图：获取列表数据(条件：商品标签1-1、新品)
+200 0.042572
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.91' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_091</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.91')" >
+        pass</a>
+
+    <div id='div_pt1.91' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.91').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.91: 【GET】产品分析-单图：获取列表数据(条件：商品标签1-1、上架时间180817-180819)
+200 0.231581
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.92' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_092</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.92')" >
+        pass</a>
+
+    <div id='div_pt1.92' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.92').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.92: 【GET】产品分析-单图：获取列表数据(条件：投放标签CA、自动选品、F、JandC)
+200 0.303551
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.93' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_093</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.93')" >
+        pass</a>
+
+    <div id='div_pt1.93' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.93').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.93: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签1-1)
+200 0.135653
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.94' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_094</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.94')" >
+        pass</a>
+
+    <div id='div_pt1.94' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.94').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.94: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签1-2)
+200 0.142605
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.95' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_095</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.95')" >
+        pass</a>
+
+    <div id='div_pt1.95' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.95').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.95: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签1-1、投放标签1-2)
+200 0.160572
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.96' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_096</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.96')" >
+        pass</a>
+
+    <div id='div_pt1.96' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.96').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.96: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签2-1)
+200 0.135637
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.97' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_097</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.97')" >
+        pass</a>
+
+    <div id='div_pt1.97' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.97').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.97: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签2-2)
+200 0.026945
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.98' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_098</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.98')" >
+        pass</a>
+
+    <div id='div_pt1.98' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.98').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.98: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签2-1、投放标签2-2)
+200 0.145615
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.99' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_099</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.99')" >
+        pass</a>
+
+    <div id='div_pt1.99' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.99').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.99: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签1-1、投放标签2-1)
+200 0.048872
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.100' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_100</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.100')" >
+        pass</a>
+
+    <div id='div_pt1.100' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.100').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.100: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签1-1、计划IOS【UK _MPA】KZ)(有问题)
+200 0.033908
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.101' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_101</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.101')" >
+        pass</a>
+
+    <div id='div_pt1.101' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.101').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.101: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签1-1-1、暂停状态)
+200 0.141155
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.102' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_102</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.102')" >
+        pass</a>
+
+    <div id='div_pt1.102' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.102').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.102: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签1-2、1-1-1、搜索计划IOS-UK-PL KZ 自动选品)
+200 0.04188
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.103' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_103</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.103')" >
+        pass</a>
+
+    <div id='div_pt1.103' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.103').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.103: 【POST】计划分析-轮播：获取列表数据(筛选条件：投放标签1-1、1-2、UK)
+200 0.039894
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.104' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_104</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.104')" >
+        pass</a>
+
+    <div id='div_pt1.104' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.104').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.104: 【POST】单元分析-轮播：获取列表数据(筛选条件：投放标签1-1)
+200 0.148938
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.105' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_105</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.105')" >
+        pass</a>
+
+    <div id='div_pt1.105' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.105').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.105: 【POST】单元分析-轮播：获取列表数据(筛选条件：投放标签1-2)
+200 0.153913
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.106' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_106</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.106')" >
+        pass</a>
+
+    <div id='div_pt1.106' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.106').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.106: 【POST】单元分析-轮播：获取列表数据(筛选条件：投放标签1-1、投放标签1-2)
+200 0.173621
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.107' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_107</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.107')" >
+        pass</a>
+
+    <div id='div_pt1.107' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.107').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.107: 【POST】单元分析-轮播：获取列表数据(筛选条件：投放标签2-1)
+200 0.026927
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.108' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_108</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.108')" >
+        pass</a>
+
+    <div id='div_pt1.108' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.108').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.108: 【POST】单元分析-轮播：获取列表数据(筛选条件：投放标签2-2)
+200 0.144526
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.109' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_109</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.109')" >
+        pass</a>
+
+    <div id='div_pt1.109' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.109').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.109: 【POST】单元分析-轮播：获取列表数据(筛选条件：投放标签2-1、投放标签2-2)
+200 0.159322
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.110' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_110</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.110')" >
+        pass</a>
+
+    <div id='div_pt1.110' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.110').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.110: 【POST】单元分析-轮播：获取列表数据(筛选条件：投放标签1-2、投放标签2-1)
+200 0.047779
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.111' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_111</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.111')" >
+        pass</a>
+
+    <div id='div_pt1.111' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.111').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.111: 【POST】单元分析-轮播：获取列表数据(筛选条件：投放标签1-2、开启状态)
+200 0.139031
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.112' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_112</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.112')" >
+        pass</a>
+
+    <div id='div_pt1.112' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.112').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.112: 【POST】单元分析-轮播：获取列表数据(筛选条件：投放标签1-1、1-2、计划IOS 【US_MPA】KZ 指定SKU)
+200 0.158331
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.113' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_113</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.113')" >
+        pass</a>
+
+    <div id='div_pt1.113' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.113').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.113: 【POST】单元分析-轮播：获取列表数据(筛选条件：投放标签CA、M)
+200 0.204835
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.114' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_114</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.114')" >
+        pass</a>
+
+    <div id='div_pt1.114' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.114').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.114: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-1)
+200 1.763804
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.115' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_115</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.115')" >
+        pass</a>
+
+    <div id='div_pt1.115' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.115').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.115: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-2)
+200 5.135418
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.116' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_116</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.116')" >
+        pass</a>
+
+    <div id='div_pt1.116' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.116').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.116: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-1、投放标签1-2)
+200 2.116525
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.117' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_117</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.117')" >
+        pass</a>
+
+    <div id='div_pt1.117' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.117').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.117: 【POST】组合分析-轮播：获取列表数据(条件：投放标签2-1)
+200 4.551192
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.118' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_118</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.118')" >
+        pass</a>
+
+    <div id='div_pt1.118' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.118').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.118: 【POST】组合分析-轮播：获取列表数据(条件：投放标签2-2)
+200 1.710954
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.119' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_119</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.119')" >
+        pass</a>
+
+    <div id='div_pt1.119' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.119').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.119: 【POST】组合分析-轮播：获取列表数据(条件：投放标签2-1、投放标签2-2)
+200 5.722843
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.120' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_120</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.120')" >
+        pass</a>
+
+    <div id='div_pt1.120' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.120').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.120: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-1、投放标签2-1)
+200 0.050921
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.121' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_121</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.121')" >
+        pass</a>
+
+    <div id='div_pt1.121' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.121').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.121: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-1-1)
+200 1.725927
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.122' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_122</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.122')" >
+        pass</a>
+
+    <div id='div_pt1.122' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.122').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.122: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-1，状态开启)
+200 1.8162
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.123' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_123</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.123')" >
+        pass</a>
+
+    <div id='div_pt1.123' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.123').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.123: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-1，模板：多sku轮播组-1个sku多张)
+200 1.934121
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.124' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_124</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.124')" >
+        pass</a>
+
+    <div id='div_pt1.124' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.124').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.124: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-1，品类-men-tops)
+200 1.95727
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.125' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_125</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.125')" >
+        pass</a>
+
+    <div id='div_pt1.125' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.125').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.125: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-1，sku-234001021)
+200 1.796325
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.126' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_126</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.126')" >
+        pass</a>
+
+    <div id='div_pt1.126' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.126').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.126: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-1，选品时间18-10-15)
+200 1.925298
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.127' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_127</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.127')" >
+        pass</a>
+
+    <div id='div_pt1.127' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.127').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.127: 【POST】组合分析-轮播：获取列表数据(条件：投放标签1-2，投放标签M)
+200 2.007734
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.128' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_128</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.128')" >
+        pass</a>
+
+    <div id='div_pt1.128' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.128').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.128: 【POST】组合分析-轮播：获取列表数据(条件：投放标签UK)
+200 5.430432
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.129' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_129</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.129')" >
+        pass</a>
+
+    <div id='div_pt1.129' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.129').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.129: 【POST】组合分析-轮播：获取列表数据(条件：投放标签UK、指定sku)
+200 1.987897
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.130' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_130</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.130')" >
+        pass</a>
+
+    <div id='div_pt1.130' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.130').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.130: 【POST】组合分析-轮播：获取列表数据(条件：投放标签UK、指定sku、M)
+200 3.304354
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.131' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_131</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.131')" >
+        pass</a>
+
+    <div id='div_pt1.131' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.131').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.131: 【POST】组合分析-轮播：获取列表数据(条件：投放标签UK、指定sku、M、null)
+200 1.739101
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.132' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_132</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.132')" >
+        pass</a>
+
+    <div id='div_pt1.132' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.132').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.132: 【GET】模板分析-轮播：获取列表数据(条件：投放标签1-1)
+200 0.464665
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.133' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_133</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.133')" >
+        pass</a>
+
+    <div id='div_pt1.133' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.133').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.133: 【GET】模板分析-轮播：获取列表数据(条件：投放标签1-2)
+200 3.672103
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.134' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_134</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.134')" >
+        pass</a>
+
+    <div id='div_pt1.134' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.134').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.134: 【GET】模板分析-轮播：获取列表数据(条件：投放标签1-1、投放标签1-2)
+200 0.517061
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.135' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_135</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.135')" >
+        pass</a>
+
+    <div id='div_pt1.135' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.135').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.135: 【GET】模板分析-轮播：获取列表数据(条件：投放标签2-1)
+200 0.418818
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.136' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_136</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.136')" >
+        pass</a>
+
+    <div id='div_pt1.136' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.136').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.136: 【GET】模板分析-轮播：获取列表数据(条件：投放标签2-2)
+200 0.425655
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.137' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_137</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.137')" >
+        pass</a>
+
+    <div id='div_pt1.137' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.137').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.137: 【GET】模板分析-轮播：获取列表数据(条件：投放标签2-1、投放标签2-2)
+200 0.466219
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.138' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_138</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.138')" >
+        pass</a>
+
+    <div id='div_pt1.138' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.138').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.138: 【GET】模板分析-轮播：获取列表数据(条件：投放标签1-1、投放标签2-1)
+200 0.048502
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.139' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_139</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.139')" >
+        pass</a>
+
+    <div id='div_pt1.139' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.139').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.139: 【GET】模板分析-轮播：获取列表数据(条件：模板标签-文案-促销标签)
+200 2.017588
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.140' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_140</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.140')" >
+        pass</a>
+
+    <div id='div_pt1.140' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.140').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.140: 【GET】模板分析-轮播：获取列表数据(条件：投放标签2-1、模板标签-文案-促销标签)
+200 0.403176
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.141' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_141</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.141')" >
+        pass</a>
+
+    <div id='div_pt1.141' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.141').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.141: 【GET】模板分析-轮播：获取列表数据(条件：投放标签2-1、计划IOS 【FR_PL】KZ 指定SKU)(有问题)
+200 0.032151
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.142' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_142</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.142')" >
+        pass</a>
+
+    <div id='div_pt1.142' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.142').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.142: 【GET】模板分析-轮播：获取列表数据(条件：投放标签2-1、状态激活)
+200 0.433837
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.143' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_143</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.143')" >
+        pass</a>
+
+    <div id='div_pt1.143' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.143').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.143: 【GET】模板分析-轮播：获取列表数据(条件：投放标签2-2、计划IOS-FR-mpa KZ 自动选品)
+200 0.265919
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.144' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_144</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.144')" >
+        pass</a>
+
+    <div id='div_pt1.144' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.144').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.144: 【GET】模板分析-轮播：获取列表数据(条件：投放标签2-2、M)
+200 0.289326
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.145' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_145</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.145')" >
+        pass</a>
+
+    <div id='div_pt1.145' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.145').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.145: 【GET】模板分析-轮播：获取列表数据(条件：投放标签UK、指定sku、M、null)
+200 0.482288
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.146' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_146</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.146')" >
+        pass</a>
+
+    <div id='div_pt1.146' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.146').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.146: 【POST】元素分析-轮播：获取列表数据(条件：投放标签1-1)
+200 1.461851
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.147' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_147</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.147')" >
+        pass</a>
+
+    <div id='div_pt1.147' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.147').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.147: 【POST】元素分析-轮播：获取列表数据(条件：投放标签1-2)
+200 2.057979
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.148' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_148</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.148')" >
+        pass</a>
+
+    <div id='div_pt1.148' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.148').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.148: 【POST】元素分析-轮播：获取列表数据(条件：投放标签1-1、投放标签1-2)(有问题)
+200 2.757917
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.149' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_149</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.149')" >
+        pass</a>
+
+    <div id='div_pt1.149' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.149').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.149: 【POST】元素分析-轮播：获取列表数据(条件：投放标签2-1)
+200 1.759006
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.150' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_150</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.150')" >
+        pass</a>
+
+    <div id='div_pt1.150' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.150').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.150: 【POST】元素分析-轮播：获取列表数据(条件：投放标签2-2)
+200 0.75359
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.151' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_151</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.151')" >
+        pass</a>
+
+    <div id='div_pt1.151' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.151').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.151: 【POST】元素分析-轮播：获取列表数据(条件：投放标签2-1、投放标签2-2)
+200 1.632624
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.152' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_152</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.152')" >
+        pass</a>
+
+    <div id='div_pt1.152' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.152').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.152: 【POST】元素分析-轮播：获取列表数据(条件：投放标签1-1、投放标签2-1)
+200 0.045979
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.153' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_153</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.153')" >
+        pass</a>
+
+    <div id='div_pt1.153' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.153').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.153: 【POST】元素分析-轮播：获取列表数据(条件：投放标签1-1，计划分析：IOS【UK _MPA】KZ 指定SKU)
+200 0.037898
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.154' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_154</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.154')" >
+        pass</a>
+
+    <div id='div_pt1.154' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.154').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.154: 【POST】元素分析-轮播：获取列表数据(条件：元素标签-红hotsale)
+200 4.509097
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.155' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_155</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.155')" >
+        pass</a>
+
+    <div id='div_pt1.155' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.155').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.155: 【POST】元素分析-轮播：获取列表数据(条件：投放标签-UK、指定sku、M、null)
+200 0.423894
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.156' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_156</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.156')" >
+        pass</a>
+
+    <div id='div_pt1.156' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.156').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.156: 【GET】产品分析-轮播：获取列表数据(条件：投放标签2-1)
+200 0.53615
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.157' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_157</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.157')" >
+        pass</a>
+
+    <div id='div_pt1.157' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.157').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.157: 【GET】产品分析-轮播：获取列表数据(条件：投放标签2-2)
+200 0.635122
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.158' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_158</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.158')" >
+        pass</a>
+
+    <div id='div_pt1.158' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.158').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.158: 【GET】产品分析-轮播：获取列表数据(条件：投放标签1-1-1)
+200 0.558065
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.159' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_159</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.159')" >
+        pass</a>
+
+    <div id='div_pt1.159' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.159').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.159: 【GET】产品分析-轮播：获取列表数据(条件：商品标签1-1)
+200 0.57848
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.160' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_160</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.160')" >
+        pass</a>
+
+    <div id='div_pt1.160' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.160').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.160: 【GET】产品分析-轮播：获取列表数据(条件：投放标签2-2,商品标签1-1)
+200 0.485922
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.161' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_161</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.161')" >
+        pass</a>
+
+    <div id='div_pt1.161' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.161').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.161: 【GET】产品分析-轮播：获取列表数据(条件：投放标签2-2,品类two-piece outfits)
+200 0.491684
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.162' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_162</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.162')" >
+        pass</a>
+
+    <div id='div_pt1.162' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.162').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.162: 【GET】产品分析-轮播：获取列表数据(条件：投放标签2-2,sku-279727405)
+200 0.819516
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.163' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_163</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.163')" >
+        pass</a>
+
+    <div id='div_pt1.163' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.163').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.163: 【GET】产品分析-轮播：获取列表数据(条件：投放标签2-2,计划IOS【UK _MPA】KZ 指定SKU)
+200 0.029814
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.164' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_164</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.164')" >
+        pass</a>
+
+    <div id='div_pt1.164' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.164').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.164: 【GET】产品分析-轮播：获取列表数据(条件：投放标签2-2,新品)
+200 0.084633
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.165' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_165</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.165')" >
+        pass</a>
+
+    <div id='div_pt1.165' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.165').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.165: 【GET】产品分析-轮播：获取列表数据(条件：投放标签2-2,上架时间0915-0928)
+200 0.578742
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.166' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_func_1_tagManager_166</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.166')" >
+        pass</a>
+
+    <div id='div_pt1.166' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.166').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre style='white-space:pre-wrap; word-wrap:break-word'>
+        
+pt1.166: 【GET】产品分析-轮播：获取列表数据(条件：投放标签UK、指定sku、M、null)
+200 0.60617
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total</td>
+    <td>166</td>
+    <td>166</td>
+    <td>0</td>
+    <td>0</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

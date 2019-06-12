@@ -1,0 +1,22 @@
+
+
+
+{
+	"filename":"common",
+	"skip": true,
+	"RECORDS": [
+		{
+		"id":0,
+		"Document":"登录页面：",
+		"Request_Method":"GET",
+		"Request_URL":"/login",
+		"Request_Headers":"",
+		"Request_Params":{"redirect":"/home"},
+		"Request_Data":"",
+      	"assertRq":[],
+		"assertExpect":[0],
+		"validate": [
+			{}]
+		}
+    ]
+}
